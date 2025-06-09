@@ -1,0 +1,2218 @@
+rm -rf ./test/_bin
+GOBIN=/mnt/c/Users/sidhe/OneDrive/Desktop/SP24/224/project-5-sidhesha/test/_bin go get github.com/mattn/go-sqlite3
+GOBIN=/mnt/c/Users/sidhe/OneDrive/Desktop/SP24/224/project-5-sidhesha/test/_bin go install ./...
+go test -v ./test/...
+=== RUN   TestSyncTwoClientsSameFileLeaderFailure
+    raft_client_test.go:12: client1 syncs with file1. client2 syncs with file1 (different content). client1 syncs again.
+2024/06/06 16:06:58 reached here
+2024/06/06 16:06:58 reached here
+2024/06/06 16:06:58 reached here 2
+2024/06/06 16:06:58 reached here 2
+2024/06/06 16:06:58 reached here 3
+2024/06/06 16:06:58 reached here 3
+2024/06/06 16:06:59 In update file for 0
+2024/06/06 16:06:59 Added to log for 0 log: [term:1]
+2024/06/06 16:06:59 in sendheartbeat loop 0
+2024/06/06 16:06:59 in appendentries for 2
+2024/06/06 16:06:59 serveer status for 2 false
+2024/06/06 16:06:59 beforer 1st part 2
+2024/06/06 16:06:59 beforer 1.5th part 2
+2024/06/06 16:06:59 beforer 2nd part 2
+2024/06/06 16:06:59 beforer 3rd part 2 input leader commit -1
+2024/06/06 16:06:59 beforer for loop commit part 2
+2024/06/06 16:06:59 in for loop commit part lastappplied for 2 is -1 with commitindex -1
+2024/06/06 16:06:59 returning from append entries 2
+2024/06/06 16:06:59 x is recvd serverId:2 term:1 success:true matchedIndex:-1
+2024/06/06 16:06:59 recvd append entry serverId:2 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:06:59 got output serverId:2 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:06:59 in appendentries for 1
+2024/06/06 16:06:59 serveer status for 1 false
+2024/06/06 16:06:59 beforer 1st part 1
+2024/06/06 16:06:59 beforer 1.5th part 1
+2024/06/06 16:06:59 beforer 2nd part 1
+2024/06/06 16:06:59 beforer 3rd part 1 input leader commit -1
+2024/06/06 16:06:59 beforer for loop commit part 1
+2024/06/06 16:06:59 in for loop commit part lastappplied for 1 is -1 with commitindex -1
+2024/06/06 16:06:59 returning from append entries 1
+2024/06/06 16:06:59 x is recvd serverId:1 term:1 success:true matchedIndex:-1
+2024/06/06 16:06:59 recvd append entry serverId:1 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:06:59 got output serverId:1 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:06:59 chceking retrying true true [true true true] [true true true]
+2024/06/06 16:07:00 After sendhearbead 0 log [term:1] nexindex: [0 1 1] matchedindx: [0 -1 -1]
+2024/06/06 16:07:00 in for loop commit part lastappplied for 0 is -1 with commitindex 0
+2024/06/06 16:07:00 lastappplied for 0 is -1 with commitindex 0
+2024/06/06 16:07:00 in sendheartbeat loop 0
+2024/06/06 16:07:00 in appendentries for 2
+2024/06/06 16:07:00 serveer status for 2 false
+2024/06/06 16:07:00 beforer 1st part 2
+2024/06/06 16:07:00 beforer 1.5th part 2
+2024/06/06 16:07:00 beforer 2nd part 2
+2024/06/06 16:07:00 beforer 3rd part 2 input leader commit 0
+2024/06/06 16:07:00 beforer for loop commit part 2
+2024/06/06 16:07:00 in for loop commit part lastappplied for 2 is -1 with commitindex 0
+2024/06/06 16:07:00 lastappplied for 2 is -1 with commitindex 0
+2024/06/06 16:07:00 returning from append entries 2
+2024/06/06 16:07:00 in appendentries for 1
+2024/06/06 16:07:00 serveer status for 1 false
+2024/06/06 16:07:00 beforer 1st part 1
+2024/06/06 16:07:00 beforer 1.5th part 1
+2024/06/06 16:07:00 beforer 2nd part 1
+2024/06/06 16:07:00 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:00 beforer for loop commit part 1
+2024/06/06 16:07:00 in for loop commit part lastappplied for 1 is -1 with commitindex 0
+2024/06/06 16:07:00 lastappplied for 1 is -1 with commitindex 0
+2024/06/06 16:07:00 returning from append entries 1
+2024/06/06 16:07:00 x is recvd serverId:2 term:1 success:true
+2024/06/06 16:07:00 recvd append entry serverId:2 term:1 success:true <nil>
+2024/06/06 16:07:00 x is recvd serverId:1 term:1 success:true
+2024/06/06 16:07:00 recvd append entry serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:00 got output serverId:2 term:1 success:true <nil>
+2024/06/06 16:07:00 got output serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:00 chceking retrying true true [true true true] [true true true]
+2024/06/06 16:07:01 Client syncing with  {[localhost:9007 localhost:9008 localhost:9009] [localhost:8080 localhost:8081]} test0 1024
+2024/06/06 16:07:01 called GetFileInfoMap 0
+2024/06/06 16:07:01 in sendheartbeat loop 0
+2024/06/06 16:07:01 in appendentries for 2
+2024/06/06 16:07:01 serveer status for 2 false
+2024/06/06 16:07:01 beforer 1st part 2
+2024/06/06 16:07:01 beforer 1.5th part 2
+2024/06/06 16:07:01 beforer 2nd part 2
+2024/06/06 16:07:01 beforer 3rd part 2 input leader commit 0
+2024/06/06 16:07:01 beforer for loop commit part 2
+2024/06/06 16:07:01 in for loop commit part lastappplied for 2 is 0 with commitindex 0
+2024/06/06 16:07:01 returning from append entries 2
+2024/06/06 16:07:01 in appendentries for 1
+2024/06/06 16:07:01 serveer status for 1 false
+2024/06/06 16:07:01 beforer 1st part 1
+2024/06/06 16:07:01 beforer 1.5th part 1
+2024/06/06 16:07:01 beforer 2nd part 1
+2024/06/06 16:07:01 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:01 beforer for loop commit part 1
+2024/06/06 16:07:01 x is recvd serverId:2 term:1 success:true
+2024/06/06 16:07:01 recvd append entry serverId:2 term:1 success:true <nil>
+2024/06/06 16:07:01 in for loop commit part lastappplied for 1 is 0 with commitindex 0
+2024/06/06 16:07:01 returning from append entries 1
+2024/06/06 16:07:01 got output serverId:2 term:1 success:true <nil>
+2024/06/06 16:07:01 x is recvd serverId:1 term:1 success:true
+2024/06/06 16:07:01 recvd append entry serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:01 got output serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:01 chceking retrying true true [true true true] [true true true]
+2024/06/06 16:07:01 called GetBlockStoreMap 0
+2024/06/06 16:07:01 in sendheartbeat loop 0
+2024/06/06 16:07:01 in appendentries for 2
+2024/06/06 16:07:01 serveer status for 2 false
+2024/06/06 16:07:01 beforer 1st part 2
+2024/06/06 16:07:01 beforer 1.5th part 2
+2024/06/06 16:07:01 beforer 2nd part 2
+2024/06/06 16:07:01 beforer 3rd part 2 input leader commit 0
+2024/06/06 16:07:01 beforer for loop commit part 2
+2024/06/06 16:07:01 in for loop commit part lastappplied for 2 is 0 with commitindex 0
+2024/06/06 16:07:01 returning from append entries 2
+2024/06/06 16:07:01 in appendentries for 1
+2024/06/06 16:07:01 serveer status for 1 false
+2024/06/06 16:07:01 beforer 1st part 1
+2024/06/06 16:07:01 beforer 1.5th part 1
+2024/06/06 16:07:01 beforer 2nd part 1
+2024/06/06 16:07:01 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:01 beforer for loop commit part 1
+2024/06/06 16:07:01 in for loop commit part lastappplied for 1 is 0 with commitindex 0
+2024/06/06 16:07:01 returning from append entries 1
+2024/06/06 16:07:01 x is recvd serverId:2 term:1 success:true
+2024/06/06 16:07:01 recvd append entry serverId:2 term:1 success:true <nil>
+2024/06/06 16:07:01 got output serverId:2 term:1 success:true <nil>
+2024/06/06 16:07:01 x is recvd serverId:1 term:1 success:true
+2024/06/06 16:07:01 recvd append entry serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:01 got output serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:01 chceking retrying true true [true true true] [true true true]
+2024/06/06 16:07:02 In update file for 0
+2024/06/06 16:07:02 Added to log for 0 log: [term:1 term:1 fileMetaData:{filename:"multi_file1.txt" version:1 blockHashList:"9193460d4355655100cced0da2455725954377e10edfa83f18d347a10e2e2628"}]
+2024/06/06 16:07:02 in sendheartbeat loop 0
+2024/06/06 16:07:02 in appendentries for 1
+2024/06/06 16:07:02 serveer status for 1 false
+2024/06/06 16:07:02 beforer 1st part 1
+2024/06/06 16:07:02 beforer 1.5th part 1
+2024/06/06 16:07:02 beforer 2nd part 1
+2024/06/06 16:07:02 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:02 beforer for loop commit part 1
+2024/06/06 16:07:02 in for loop commit part lastappplied for 1 is 0 with commitindex 0
+2024/06/06 16:07:02 returning from append entries 1
+2024/06/06 16:07:02 in appendentries for 2
+2024/06/06 16:07:02 serveer status for 2 false
+2024/06/06 16:07:02 beforer 1st part 2
+2024/06/06 16:07:02 beforer 1.5th part 2
+2024/06/06 16:07:02 beforer 2nd part 2
+2024/06/06 16:07:02 beforer 3rd part 2 input leader commit 0
+2024/06/06 16:07:02 beforer for loop commit part 2
+2024/06/06 16:07:02 in for loop commit part lastappplied for 2 is 0 with commitindex 0
+2024/06/06 16:07:02 returning from append entries 2
+2024/06/06 16:07:02 x is recvd serverId:1 term:1 success:true
+2024/06/06 16:07:02 recvd append entry serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:02 got output serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:02 x is recvd serverId:2 term:1 success:true
+2024/06/06 16:07:02 recvd append entry serverId:2 term:1 success:true <nil>
+2024/06/06 16:07:02 got output serverId:2 term:1 success:true <nil>
+2024/06/06 16:07:02 chceking retrying true true [true true true] [true true true]
+2024/06/06 16:07:02 After sendhearbead 0 log [term:1 term:1 fileMetaData:{filename:"multi_file1.txt" version:1 blockHashList:"9193460d4355655100cced0da2455725954377e10edfa83f18d347a10e2e2628"}] nexindex: [0 2 2] matchedindx: [0 0 0]
+2024/06/06 16:07:02 in for loop commit part lastappplied for 0 is 0 with commitindex 1
+2024/06/06 16:07:02 lastappplied for 0 is 0 with commitindex 1
+2024/06/06 16:07:02 new file  multi_file1.txt created with version:  1
+2024/06/06 16:07:02 in sendheartbeat loop 0
+2024/06/06 16:07:02 in appendentries for 1
+2024/06/06 16:07:02 serveer status for 1 false
+2024/06/06 16:07:02 beforer 1st part 1
+2024/06/06 16:07:02 beforer 1.5th part 1
+2024/06/06 16:07:02 beforer 2nd part 1
+2024/06/06 16:07:02 beforer 3rd part 1 input leader commit 1
+2024/06/06 16:07:02 beforer for loop commit part 1
+2024/06/06 16:07:02 in for loop commit part lastappplied for 1 is 0 with commitindex 1
+2024/06/06 16:07:02 in appendentries for 2
+2024/06/06 16:07:02 lastappplied for 1 is 0 with commitindex 1
+2024/06/06 16:07:02 serveer status for 2 false
+2024/06/06 16:07:02 beforer 1st part 2
+2024/06/06 16:07:02 beforer 1.5th part 2
+2024/06/06 16:07:02 beforer 2nd part 2
+2024/06/06 16:07:02 new file  multi_file1.txt created with version:  1
+2024/06/06 16:07:02 beforer 3rd part 2 input leader commit 1
+2024/06/06 16:07:02 returning from append entries 1
+2024/06/06 16:07:02 beforer for loop commit part 2
+2024/06/06 16:07:02 in for loop commit part lastappplied for 2 is 0 with commitindex 1
+2024/06/06 16:07:02 lastappplied for 2 is 0 with commitindex 1
+2024/06/06 16:07:02 new file  multi_file1.txt created with version:  1
+2024/06/06 16:07:02 returning from append entries 2
+2024/06/06 16:07:02 x is recvd serverId:2 term:1 success:true matchedIndex:1
+2024/06/06 16:07:02 recvd append entry serverId:2 term:1 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:02 got output serverId:2 term:1 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:02 x is recvd serverId:1 term:1 success:true matchedIndex:1
+2024/06/06 16:07:02 recvd append entry serverId:1 term:1 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:02 got output serverId:1 term:1 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:02 chceking retrying true true [true true true] [true true true]
+2024/06/06 16:07:03 Server 0 is crashed
+2024/06/06 16:07:03 In update file for 1
+2024/06/06 16:07:03 Added to log for 1 log: [term:1 term:1 fileMetaData:{filename:"multi_file1.txt" version:1 blockHashList:"9193460d4355655100cced0da2455725954377e10edfa83f18d347a10e2e2628"} term:2]
+2024/06/06 16:07:03 in sendheartbeat loop 1
+2024/06/06 16:07:03 in appendentries for 2
+2024/06/06 16:07:03 serveer status for 2 false
+2024/06/06 16:07:03 beforer 1st part 2
+2024/06/06 16:07:03 beforer 1.5th part 2
+2024/06/06 16:07:03 beforer 2nd part 2
+2024/06/06 16:07:03 beforer 3rd part 2 input leader commit 1
+2024/06/06 16:07:03 beforer for loop commit part 2
+2024/06/06 16:07:03 in for loop commit part lastappplied for 2 is 1 with commitindex 1
+2024/06/06 16:07:03 returning from append entries 2
+2024/06/06 16:07:03 x is recvd serverId:2 term:2 success:true matchedIndex:1
+2024/06/06 16:07:03 recvd append entry serverId:2 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:03 got output serverId:2 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:03 in appendentries for 0
+2024/06/06 16:07:03 serveer status for 0 true
+2024/06/06 16:07:03 retruning from crashed 0 0 term:1 matchedIndex:1
+2024/06/06 16:07:03 returning from append entries 0
+2024/06/06 16:07:03 x is recvd <nil>
+2024/06/06 16:07:03 output append 
+2024/06/06 16:07:03 recvd append entry  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:03 got output  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:03 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:03 is perr online [false true true]
+2024/06/06 16:07:03 chceking retrying true true [false true true] [false true true]
+2024/06/06 16:07:03 After sendhearbead 1 log [term:1 term:1 fileMetaData:{filename:"multi_file1.txt" version:1 blockHashList:"9193460d4355655100cced0da2455725954377e10edfa83f18d347a10e2e2628"} term:2] nexindex: [2 0 3] matchedindx: [-1 0 1]
+2024/06/06 16:07:03 in for loop commit part lastappplied for 1 is 1 with commitindex 2
+2024/06/06 16:07:03 lastappplied for 1 is 1 with commitindex 2
+2024/06/06 16:07:03 in sendheartbeat loop 1
+2024/06/06 16:07:03 in appendentries for 0
+2024/06/06 16:07:03 serveer status for 0 true
+2024/06/06 16:07:03 retruning from crashed 0 0 term:1 matchedIndex:1
+2024/06/06 16:07:03 returning from append entries 0
+2024/06/06 16:07:03 in appendentries for 2
+2024/06/06 16:07:03 serveer status for 2 false
+2024/06/06 16:07:03 beforer 1st part 2
+2024/06/06 16:07:03 beforer 1.5th part 2
+2024/06/06 16:07:03 beforer 2nd part 2
+2024/06/06 16:07:03 beforer 3rd part 2 input leader commit 2
+2024/06/06 16:07:03 beforer for loop commit part 2
+2024/06/06 16:07:03 in for loop commit part lastappplied for 2 is 1 with commitindex 2
+2024/06/06 16:07:03 lastappplied for 2 is 1 with commitindex 2
+2024/06/06 16:07:03 returning from append entries 2
+2024/06/06 16:07:03 x is recvd <nil>
+2024/06/06 16:07:03 output append 
+2024/06/06 16:07:03 recvd append entry  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:03 got output  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:03 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:03 is perr online [false true true]
+2024/06/06 16:07:03 x is recvd serverId:2 term:2 success:true matchedIndex:2
+2024/06/06 16:07:03 recvd append entry serverId:2 term:2 success:true matchedIndex:2 <nil>
+2024/06/06 16:07:03 got output serverId:2 term:2 success:true matchedIndex:2 <nil>
+2024/06/06 16:07:03 chceking retrying true true [false true true] [false true true]
+2024/06/06 16:07:04 Client syncing with  {[localhost:9007 localhost:9008 localhost:9009] [localhost:8080 localhost:8081]} test1 1024
+2024/06/06 16:07:04 called GetFileInfoMap 0
+2024/06/06 16:07:04 called GetFileInfoMap 1
+2024/06/06 16:07:04 in sendheartbeat loop 1
+2024/06/06 16:07:04 in appendentries for 2
+2024/06/06 16:07:04 serveer status for 2 false
+2024/06/06 16:07:04 beforer 1st part 2
+2024/06/06 16:07:04 beforer 1.5th part 2
+2024/06/06 16:07:04 beforer 2nd part 2
+2024/06/06 16:07:04 beforer 3rd part 2 input leader commit 2
+2024/06/06 16:07:04 beforer for loop commit part 2
+2024/06/06 16:07:04 in for loop commit part lastappplied for 2 is 2 with commitindex 2
+2024/06/06 16:07:04 returning from append entries 2
+2024/06/06 16:07:04 in appendentries for 0
+2024/06/06 16:07:04 serveer status for 0 true
+2024/06/06 16:07:04 retruning from crashed 0 0 term:1 matchedIndex:1
+2024/06/06 16:07:04 returning from append entries 0
+2024/06/06 16:07:04 x is recvd <nil>
+2024/06/06 16:07:04 output append 
+2024/06/06 16:07:04 x is recvd serverId:2 term:2 success:true matchedIndex:2
+2024/06/06 16:07:04 recvd append entry  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:04 recvd append entry serverId:2 term:2 success:true matchedIndex:2 <nil>
+2024/06/06 16:07:04 got output  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:04 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:04 is perr online [false true true]
+2024/06/06 16:07:04 got output serverId:2 term:2 success:true matchedIndex:2 <nil>
+2024/06/06 16:07:04 chceking retrying true true [false true true] [false true true]
+2024/06/06 16:07:04 called GetBlockStoreMap 0
+2024/06/06 16:07:04 called GetBlockStoreMap 1
+2024/06/06 16:07:04 in sendheartbeat loop 1
+2024/06/06 16:07:04 in appendentries for 2
+2024/06/06 16:07:04 serveer status for 2 false
+2024/06/06 16:07:04 beforer 1st part 2
+2024/06/06 16:07:04 beforer 1.5th part 2
+2024/06/06 16:07:04 beforer 2nd part 2
+2024/06/06 16:07:04 beforer 3rd part 2 input leader commit 2
+2024/06/06 16:07:04 beforer for loop commit part 2
+2024/06/06 16:07:04 in for loop commit part lastappplied for 2 is 2 with commitindex 2
+2024/06/06 16:07:04 returning from append entries 2
+2024/06/06 16:07:04 in appendentries for 0
+2024/06/06 16:07:04 serveer status for 0 true
+2024/06/06 16:07:04 retruning from crashed 0 0 term:1 matchedIndex:1
+2024/06/06 16:07:04 returning from append entries 0
+2024/06/06 16:07:04 x is recvd serverId:2 term:2 success:true matchedIndex:2
+2024/06/06 16:07:04 recvd append entry serverId:2 term:2 success:true matchedIndex:2 <nil>
+2024/06/06 16:07:04 got output serverId:2 term:2 success:true matchedIndex:2 <nil>
+2024/06/06 16:07:04 x is recvd <nil>
+2024/06/06 16:07:04 output append 
+2024/06/06 16:07:04 recvd append entry  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:04 got output  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:04 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:04 is perr online [false true true]
+2024/06/06 16:07:04 chceking retrying true true [false true true] [false true true]
+2024/06/06 16:07:05 in sendheartbeat loop 1
+2024/06/06 16:07:05 in appendentries for 2
+2024/06/06 16:07:05 in appendentries for 0
+2024/06/06 16:07:05 serveer status for 2 false
+2024/06/06 16:07:05 serveer status for 0 true
+2024/06/06 16:07:05 beforer 1st part 2
+2024/06/06 16:07:05 beforer 1.5th part 2
+2024/06/06 16:07:05 beforer 2nd part 2
+2024/06/06 16:07:05 beforer 3rd part 2 input leader commit 2
+2024/06/06 16:07:05 beforer for loop commit part 2
+2024/06/06 16:07:05 in for loop commit part lastappplied for 2 is 2 with commitindex 2
+2024/06/06 16:07:05 returning from append entries 2
+2024/06/06 16:07:05 retruning from crashed 0 0 term:1 matchedIndex:1
+2024/06/06 16:07:05 returning from append entries 0
+2024/06/06 16:07:05 x is recvd <nil>
+2024/06/06 16:07:05 output append 
+2024/06/06 16:07:05 x is recvd serverId:2 term:2 success:true matchedIndex:2
+2024/06/06 16:07:05 recvd append entry serverId:2 term:2 success:true matchedIndex:2 <nil>
+2024/06/06 16:07:05 recvd append entry  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:05 got output serverId:2 term:2 success:true matchedIndex:2 <nil>
+2024/06/06 16:07:05 got output  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:05 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:05 is perr online [false true true]
+2024/06/06 16:07:05 chceking retrying true true [false true true] [false true true]
+2024/06/06 16:07:06 Client syncing with  {[localhost:9007 localhost:9008 localhost:9009] [localhost:8080 localhost:8081]} test0 1024
+2024/06/06 16:07:06 called GetFileInfoMap 0
+2024/06/06 16:07:06 called GetFileInfoMap 1
+2024/06/06 16:07:06 in sendheartbeat loop 1
+2024/06/06 16:07:06 in appendentries for 0
+2024/06/06 16:07:06 in appendentries for 2
+2024/06/06 16:07:06 serveer status for 0 true
+2024/06/06 16:07:06 serveer status for 2 false
+2024/06/06 16:07:06 beforer 1st part 2
+2024/06/06 16:07:06 beforer 1.5th part 2
+2024/06/06 16:07:06 beforer 2nd part 2
+2024/06/06 16:07:06 beforer 3rd part 2 input leader commit 2
+2024/06/06 16:07:06 beforer for loop commit part 2
+2024/06/06 16:07:06 in for loop commit part lastappplied for 2 is 2 with commitindex 2
+2024/06/06 16:07:06 returning from append entries 2
+2024/06/06 16:07:06 retruning from crashed 0 0 term:1 matchedIndex:1
+2024/06/06 16:07:06 returning from append entries 0
+2024/06/06 16:07:06 x is recvd <nil>
+2024/06/06 16:07:06 output append 
+2024/06/06 16:07:06 recvd append entry  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:06 x is recvd serverId:2 term:2 success:true matchedIndex:2
+2024/06/06 16:07:06 recvd append entry serverId:2 term:2 success:true matchedIndex:2 <nil>
+2024/06/06 16:07:06 got output  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:06 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:06 is perr online [false true true]
+2024/06/06 16:07:06 got output serverId:2 term:2 success:true matchedIndex:2 <nil>
+2024/06/06 16:07:06 chceking retrying true true [false true true] [false true true]
+2024/06/06 16:07:06 in sendheartbeat loop 1
+2024/06/06 16:07:06 in appendentries for 2
+2024/06/06 16:07:06 serveer status for 2 false
+2024/06/06 16:07:06 beforer 1st part 2
+2024/06/06 16:07:06 beforer 1.5th part 2
+2024/06/06 16:07:06 beforer 2nd part 2
+2024/06/06 16:07:06 beforer 3rd part 2 input leader commit 2
+2024/06/06 16:07:06 beforer for loop commit part 2
+2024/06/06 16:07:06 in for loop commit part lastappplied for 2 is 2 with commitindex 2
+2024/06/06 16:07:06 returning from append entries 2
+2024/06/06 16:07:06 in appendentries for 0
+2024/06/06 16:07:06 serveer status for 0 true
+2024/06/06 16:07:06 retruning from crashed 0 0 term:1 matchedIndex:1
+2024/06/06 16:07:06 returning from append entries 0
+2024/06/06 16:07:06 x is recvd <nil>
+2024/06/06 16:07:06 output append 
+2024/06/06 16:07:06 x is recvd serverId:2 term:2 success:true matchedIndex:2
+2024/06/06 16:07:06 recvd append entry  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:06 recvd append entry serverId:2 term:2 success:true matchedIndex:2 <nil>
+2024/06/06 16:07:06 got output  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:06 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:06 is perr online [false true true]
+2024/06/06 16:07:06 got output serverId:2 term:2 success:true matchedIndex:2 <nil>
+2024/06/06 16:07:06 chceking retrying true true [false true true] [false true true]
+2024/06/06 16:07:07 in sendheartbeat loop 1
+2024/06/06 16:07:07 in appendentries for 2
+2024/06/06 16:07:07 serveer status for 2 false
+2024/06/06 16:07:07 beforer 1st part 2
+2024/06/06 16:07:07 beforer 1.5th part 2
+2024/06/06 16:07:07 beforer 2nd part 2
+2024/06/06 16:07:07 beforer 3rd part 2 input leader commit 2
+2024/06/06 16:07:07 beforer for loop commit part 2
+2024/06/06 16:07:07 in for loop commit part lastappplied for 2 is 2 with commitindex 2
+2024/06/06 16:07:07 returning from append entries 2
+2024/06/06 16:07:07 in appendentries for 0
+2024/06/06 16:07:07 serveer status for 0 true
+2024/06/06 16:07:07 retruning from crashed 0 0 term:1 matchedIndex:1
+2024/06/06 16:07:07 returning from append entries 0
+2024/06/06 16:07:07 x is recvd serverId:2 term:2 success:true matchedIndex:2
+2024/06/06 16:07:07 recvd append entry serverId:2 term:2 success:true matchedIndex:2 <nil>
+2024/06/06 16:07:07 got output serverId:2 term:2 success:true matchedIndex:2 <nil>
+2024/06/06 16:07:07 x is recvd <nil>
+2024/06/06 16:07:07 output append 
+2024/06/06 16:07:07 recvd append entry  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:07 got output  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:07 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:07 is perr online [false true true]
+2024/06/06 16:07:07 chceking retrying true true [false true true] [false true true]
+--- PASS: TestSyncTwoClientsSameFileLeaderFailure (9.94s)
+=== RUN   TestRaftSetLeader
+2024/06/06 16:07:08 reached here
+2024/06/06 16:07:08 reached here
+2024/06/06 16:07:08 reached here 2
+2024/06/06 16:07:08 reached here 3
+2024/06/06 16:07:08 reached here 2
+2024/06/06 16:07:08 reached here 3
+2024/06/06 16:07:09 In update file for 0
+2024/06/06 16:07:09 Added to log for 0 log: [term:1]
+2024/06/06 16:07:09 in sendheartbeat loop 0
+2024/06/06 16:07:09 in appendentries for 1
+2024/06/06 16:07:09 in appendentries for 2
+2024/06/06 16:07:09 serveer status for 2 false
+2024/06/06 16:07:09 serveer status for 1 false
+2024/06/06 16:07:09 beforer 1st part 1
+2024/06/06 16:07:09 beforer 1st part 2
+2024/06/06 16:07:09 beforer 1.5th part 1
+2024/06/06 16:07:09 beforer 1.5th part 2
+2024/06/06 16:07:09 beforer 2nd part 1
+2024/06/06 16:07:09 beforer 2nd part 2
+2024/06/06 16:07:09 beforer 3rd part 1 input leader commit -1
+2024/06/06 16:07:09 beforer 3rd part 2 input leader commit -1
+2024/06/06 16:07:09 beforer for loop commit part 1
+2024/06/06 16:07:09 in for loop commit part lastappplied for 1 is -1 with commitindex -1
+2024/06/06 16:07:09 beforer for loop commit part 2
+2024/06/06 16:07:09 returning from append entries 1
+2024/06/06 16:07:09 in for loop commit part lastappplied for 2 is -1 with commitindex -1
+2024/06/06 16:07:09 returning from append entries 2
+2024/06/06 16:07:09 x is recvd serverId:1 term:1 success:true matchedIndex:-1
+2024/06/06 16:07:09 x is recvd serverId:2 term:1 success:true matchedIndex:-1
+2024/06/06 16:07:09 recvd append entry serverId:1 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:07:09 recvd append entry serverId:2 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:07:09 got output serverId:1 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:07:09 got output serverId:2 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:07:09 chceking retrying true true [true true true] [true true true]
+2024/06/06 16:07:10 After sendhearbead 0 log [term:1] nexindex: [0 1 1] matchedindx: [0 -1 -1]
+2024/06/06 16:07:10 in for loop commit part lastappplied for 0 is -1 with commitindex 0
+2024/06/06 16:07:10 lastappplied for 0 is -1 with commitindex 0
+2024/06/06 16:07:10 in sendheartbeat loop 0
+2024/06/06 16:07:10 in appendentries for 2
+2024/06/06 16:07:10 serveer status for 2 false
+2024/06/06 16:07:10 beforer 1st part 2
+2024/06/06 16:07:10 beforer 1.5th part 2
+2024/06/06 16:07:10 beforer 2nd part 2
+2024/06/06 16:07:10 beforer 3rd part 2 input leader commit 0
+2024/06/06 16:07:10 beforer for loop commit part 2
+2024/06/06 16:07:10 in for loop commit part lastappplied for 2 is -1 with commitindex 0
+2024/06/06 16:07:10 lastappplied for 2 is -1 with commitindex 0
+2024/06/06 16:07:10 returning from append entries 2
+2024/06/06 16:07:10 in appendentries for 1
+2024/06/06 16:07:10 serveer status for 1 false
+2024/06/06 16:07:10 beforer 1st part 1
+2024/06/06 16:07:10 beforer 1.5th part 1
+2024/06/06 16:07:10 beforer 2nd part 1
+2024/06/06 16:07:10 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:10 beforer for loop commit part 1
+2024/06/06 16:07:10 in for loop commit part lastappplied for 1 is -1 with commitindex 0
+2024/06/06 16:07:10 lastappplied for 1 is -1 with commitindex 0
+2024/06/06 16:07:10 returning from append entries 1
+2024/06/06 16:07:10 x is recvd serverId:2 term:1 success:true
+2024/06/06 16:07:10 recvd append entry serverId:2 term:1 success:true <nil>
+2024/06/06 16:07:10 got output serverId:2 term:1 success:true <nil>
+2024/06/06 16:07:10 x is recvd serverId:1 term:1 success:true
+2024/06/06 16:07:10 recvd append entry serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:10 got output serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:10 chceking retrying true true [true true true] [true true true]
+2024/06/06 16:07:10 In update file for 2
+2024/06/06 16:07:10 Added to log for 2 log: [term:1 term:2]
+2024/06/06 16:07:10 in sendheartbeat loop 2
+2024/06/06 16:07:10 in appendentries for 1
+2024/06/06 16:07:10 serveer status for 1 false
+2024/06/06 16:07:10 beforer 1st part 1
+2024/06/06 16:07:10 beforer 1.5th part 1
+2024/06/06 16:07:10 beforer 2nd part 1
+2024/06/06 16:07:10 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:10 beforer for loop commit part 1
+2024/06/06 16:07:10 in for loop commit part lastappplied for 1 is 0 with commitindex 0
+2024/06/06 16:07:10 returning from append entries 1
+2024/06/06 16:07:10 in appendentries for 0
+2024/06/06 16:07:10 serveer status for 0 false
+2024/06/06 16:07:10 beforer 1st part 0
+2024/06/06 16:07:10 beforer 1.5th part 0
+2024/06/06 16:07:10 beforer 2nd part 0
+2024/06/06 16:07:10 beforer 3rd part 0 input leader commit 0
+2024/06/06 16:07:10 beforer for loop commit part 0
+2024/06/06 16:07:10 in for loop commit part lastappplied for 0 is 0 with commitindex 0
+2024/06/06 16:07:10 returning from append entries 0
+2024/06/06 16:07:10 x is recvd serverId:1 term:2 success:true
+2024/06/06 16:07:10 recvd append entry serverId:1 term:2 success:true <nil>
+2024/06/06 16:07:10 got output serverId:1 term:2 success:true <nil>
+2024/06/06 16:07:10 x is recvd term:2 success:true
+2024/06/06 16:07:10 recvd append entry term:2 success:true <nil>
+2024/06/06 16:07:10 got output term:2 success:true <nil>
+2024/06/06 16:07:10 chceking retrying true true [true true true] [true true true]
+2024/06/06 16:07:11 After sendhearbead 2 log [term:1 term:2] nexindex: [2 2 0] matchedindx: [0 0 0]
+2024/06/06 16:07:11 in for loop commit part lastappplied for 2 is 0 with commitindex 1
+2024/06/06 16:07:11 lastappplied for 2 is 0 with commitindex 1
+2024/06/06 16:07:11 in sendheartbeat loop 2
+2024/06/06 16:07:11 in appendentries for 1
+2024/06/06 16:07:11 serveer status for 1 false
+2024/06/06 16:07:11 beforer 1st part 1
+2024/06/06 16:07:11 beforer 1.5th part 1
+2024/06/06 16:07:11 beforer 2nd part 1
+2024/06/06 16:07:11 beforer 3rd part 1 input leader commit 1
+2024/06/06 16:07:11 beforer for loop commit part 1
+2024/06/06 16:07:11 in for loop commit part lastappplied for 1 is 0 with commitindex 1
+2024/06/06 16:07:11 lastappplied for 1 is 0 with commitindex 1
+2024/06/06 16:07:11 returning from append entries 1
+2024/06/06 16:07:11 in appendentries for 0
+2024/06/06 16:07:11 serveer status for 0 false
+2024/06/06 16:07:11 beforer 1st part 0
+2024/06/06 16:07:11 beforer 1.5th part 0
+2024/06/06 16:07:11 beforer 2nd part 0
+2024/06/06 16:07:11 beforer 3rd part 0 input leader commit 1
+2024/06/06 16:07:11 beforer for loop commit part 0
+2024/06/06 16:07:11 in for loop commit part lastappplied for 0 is 0 with commitindex 1
+2024/06/06 16:07:11 lastappplied for 0 is 0 with commitindex 1
+2024/06/06 16:07:11 returning from append entries 0
+2024/06/06 16:07:11 x is recvd serverId:1 term:2 success:true matchedIndex:1
+2024/06/06 16:07:11 recvd append entry serverId:1 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:11 got output serverId:1 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:11 x is recvd term:2 success:true matchedIndex:1
+2024/06/06 16:07:11 recvd append entry term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:11 got output term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:11 chceking retrying true true [true true true] [true true true]
+--- PASS: TestRaftSetLeader (4.01s)
+=== RUN   TestRaftFollowersGetUpdates
+2024/06/06 16:07:12 reached here
+2024/06/06 16:07:12 reached here
+2024/06/06 16:07:12 reached here 2
+2024/06/06 16:07:12 reached here 3
+2024/06/06 16:07:12 reached here 2
+2024/06/06 16:07:12 reached here 3
+2024/06/06 16:07:13 In update file for 0
+2024/06/06 16:07:13 Added to log for 0 log: [term:1]
+2024/06/06 16:07:13 in sendheartbeat loop 0
+2024/06/06 16:07:13 in appendentries for 2
+2024/06/06 16:07:13 serveer status for 2 false
+2024/06/06 16:07:13 beforer 1st part 2
+2024/06/06 16:07:13 beforer 1.5th part 2
+2024/06/06 16:07:13 beforer 2nd part 2
+2024/06/06 16:07:13 beforer 3rd part 2 input leader commit -1
+2024/06/06 16:07:13 beforer for loop commit part 2
+2024/06/06 16:07:13 in for loop commit part lastappplied for 2 is -1 with commitindex -1
+2024/06/06 16:07:13 returning from append entries 2
+2024/06/06 16:07:13 x is recvd serverId:2 term:1 success:true matchedIndex:-1
+2024/06/06 16:07:13 recvd append entry serverId:2 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:07:13 got output serverId:2 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:07:13 in appendentries for 1
+2024/06/06 16:07:13 serveer status for 1 false
+2024/06/06 16:07:13 beforer 1st part 1
+2024/06/06 16:07:13 beforer 1.5th part 1
+2024/06/06 16:07:13 beforer 2nd part 1
+2024/06/06 16:07:13 beforer 3rd part 1 input leader commit -1
+2024/06/06 16:07:13 beforer for loop commit part 1
+2024/06/06 16:07:13 in for loop commit part lastappplied for 1 is -1 with commitindex -1
+2024/06/06 16:07:13 returning from append entries 1
+2024/06/06 16:07:13 x is recvd serverId:1 term:1 success:true matchedIndex:-1
+2024/06/06 16:07:13 recvd append entry serverId:1 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:07:13 got output serverId:1 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:07:13 chceking retrying true true [true true true] [true true true]
+2024/06/06 16:07:14 After sendhearbead 0 log [term:1] nexindex: [0 1 1] matchedindx: [0 -1 -1]
+2024/06/06 16:07:14 in for loop commit part lastappplied for 0 is -1 with commitindex 0
+2024/06/06 16:07:14 lastappplied for 0 is -1 with commitindex 0
+2024/06/06 16:07:14 in sendheartbeat loop 0
+2024/06/06 16:07:14 in appendentries for 2
+2024/06/06 16:07:14 in appendentries for 1
+2024/06/06 16:07:14 serveer status for 1 false
+2024/06/06 16:07:14 beforer 1st part 1
+2024/06/06 16:07:14 beforer 1.5th part 1
+2024/06/06 16:07:14 serveer status for 2 false
+2024/06/06 16:07:14 beforer 2nd part 1
+2024/06/06 16:07:14 beforer 1st part 2
+2024/06/06 16:07:14 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:14 beforer 1.5th part 2
+2024/06/06 16:07:14 beforer for loop commit part 1
+2024/06/06 16:07:14 beforer 2nd part 2
+2024/06/06 16:07:14 beforer 3rd part 2 input leader commit 0
+2024/06/06 16:07:14 in for loop commit part lastappplied for 1 is -1 with commitindex 0
+2024/06/06 16:07:14 beforer for loop commit part 2
+2024/06/06 16:07:14 lastappplied for 1 is -1 with commitindex 0
+2024/06/06 16:07:14 returning from append entries 1
+2024/06/06 16:07:14 in for loop commit part lastappplied for 2 is -1 with commitindex 0
+2024/06/06 16:07:14 lastappplied for 2 is -1 with commitindex 0
+2024/06/06 16:07:14 returning from append entries 2
+2024/06/06 16:07:14 x is recvd serverId:1 term:1 success:true
+2024/06/06 16:07:14 recvd append entry serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:14 got output serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:14 x is recvd serverId:2 term:1 success:true
+2024/06/06 16:07:14 recvd append entry serverId:2 term:1 success:true <nil>
+2024/06/06 16:07:14 got output serverId:2 term:1 success:true <nil>
+2024/06/06 16:07:14 chceking retrying true true [true true true] [true true true]
+2024/06/06 16:07:14 In update file for 0
+2024/06/06 16:07:14 Added to log for 0 log: [term:1 term:1 fileMetaData:{filename:"testFile1" version:1}]
+2024/06/06 16:07:14 in sendheartbeat loop 0
+2024/06/06 16:07:14 in appendentries for 1
+2024/06/06 16:07:14 serveer status for 1 false
+2024/06/06 16:07:14 beforer 1st part 1
+2024/06/06 16:07:14 beforer 1.5th part 1
+2024/06/06 16:07:14 beforer 2nd part 1
+2024/06/06 16:07:14 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:14 beforer for loop commit part 1
+2024/06/06 16:07:14 in for loop commit part lastappplied for 1 is 0 with commitindex 0
+2024/06/06 16:07:14 returning from append entries 1
+2024/06/06 16:07:14 in appendentries for 2
+2024/06/06 16:07:14 serveer status for 2 false
+2024/06/06 16:07:14 beforer 1st part 2
+2024/06/06 16:07:14 beforer 1.5th part 2
+2024/06/06 16:07:14 beforer 2nd part 2
+2024/06/06 16:07:14 beforer 3rd part 2 input leader commit 0
+2024/06/06 16:07:14 beforer for loop commit part 2
+2024/06/06 16:07:14 in for loop commit part lastappplied for 2 is 0 with commitindex 0
+2024/06/06 16:07:14 returning from append entries 2
+2024/06/06 16:07:14 x is recvd serverId:2 term:1 success:true
+2024/06/06 16:07:14 recvd append entry serverId:2 term:1 success:true <nil>
+2024/06/06 16:07:14 x is recvd serverId:1 term:1 success:true
+2024/06/06 16:07:14 got output serverId:2 term:1 success:true <nil>
+2024/06/06 16:07:14 recvd append entry serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:14 got output serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:14 chceking retrying true true [true true true] [true true true]
+2024/06/06 16:07:15 After sendhearbead 0 log [term:1 term:1 fileMetaData:{filename:"testFile1" version:1}] nexindex: [0 2 2] matchedindx: [0 0 0]
+2024/06/06 16:07:15 in for loop commit part lastappplied for 0 is 0 with commitindex 1
+2024/06/06 16:07:15 lastappplied for 0 is 0 with commitindex 1
+2024/06/06 16:07:15 new file  testFile1 created with version:  1
+2024/06/06 16:07:15 in sendheartbeat loop 0
+2024/06/06 16:07:15 in appendentries for 2
+2024/06/06 16:07:15 serveer status for 2 false
+2024/06/06 16:07:15 beforer 1st part 2
+2024/06/06 16:07:15 beforer 1.5th part 2
+2024/06/06 16:07:15 beforer 2nd part 2
+2024/06/06 16:07:15 beforer 3rd part 2 input leader commit 1
+2024/06/06 16:07:15 beforer for loop commit part 2
+2024/06/06 16:07:15 in for loop commit part lastappplied for 2 is 0 with commitindex 1
+2024/06/06 16:07:15 lastappplied for 2 is 0 with commitindex 1
+2024/06/06 16:07:15 new file  testFile1 created with version:  1
+2024/06/06 16:07:15 returning from append entries 2
+2024/06/06 16:07:15 in appendentries for 1
+2024/06/06 16:07:15 serveer status for 1 false
+2024/06/06 16:07:15 beforer 1st part 1
+2024/06/06 16:07:15 beforer 1.5th part 1
+2024/06/06 16:07:15 beforer 2nd part 1
+2024/06/06 16:07:15 beforer 3rd part 1 input leader commit 1
+2024/06/06 16:07:15 beforer for loop commit part 1
+2024/06/06 16:07:15 in for loop commit part lastappplied for 1 is 0 with commitindex 1
+2024/06/06 16:07:15 lastappplied for 1 is 0 with commitindex 1
+2024/06/06 16:07:15 new file  testFile1 created with version:  1
+2024/06/06 16:07:15 returning from append entries 1
+2024/06/06 16:07:15 x is recvd serverId:2 term:1 success:true matchedIndex:1
+2024/06/06 16:07:15 recvd append entry serverId:2 term:1 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:15 got output serverId:2 term:1 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:15 x is recvd serverId:1 term:1 success:true matchedIndex:1
+2024/06/06 16:07:15 recvd append entry serverId:1 term:1 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:15 got output serverId:1 term:1 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:15 chceking retrying true true [true true true] [true true true]
+--- PASS: TestRaftFollowersGetUpdates (4.00s)
+=== RUN   TestRaftNetworkPartitionWithConcurrentRequests
+    raft_test.go:128: leader1 gets 1 request while the majority of the cluster is unreachable. As a result of a (one way) network partition, leader1 ends up with the minority. leader2 from the majority is elected
+2024/06/06 16:07:16 reached here
+2024/06/06 16:07:16 reached here
+2024/06/06 16:07:16 reached here 2
+2024/06/06 16:07:16 reached here 3
+2024/06/06 16:07:16 reached here 2
+2024/06/06 16:07:16 reached here 3
+2024/06/06 16:07:17 In update file for 0
+2024/06/06 16:07:17 Added to log for 0 log: [term:1]
+2024/06/06 16:07:17 in sendheartbeat loop 0
+2024/06/06 16:07:17 in appendentries for 4
+2024/06/06 16:07:17 serveer status for 4 false
+2024/06/06 16:07:17 beforer 1st part 4
+2024/06/06 16:07:17 beforer 1.5th part 4
+2024/06/06 16:07:17 beforer 2nd part 4
+2024/06/06 16:07:17 beforer 3rd part 4 input leader commit -1
+2024/06/06 16:07:17 beforer for loop commit part 4
+2024/06/06 16:07:17 in for loop commit part lastappplied for 4 is -1 with commitindex -1
+2024/06/06 16:07:17 returning from append entries 4
+2024/06/06 16:07:17 x is recvd serverId:4 term:1 success:true matchedIndex:-1
+2024/06/06 16:07:17 recvd append entry serverId:4 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:07:17 got output serverId:4 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:07:17 in appendentries for 3
+2024/06/06 16:07:17 serveer status for 3 false
+2024/06/06 16:07:17 beforer 1st part 3
+2024/06/06 16:07:17 beforer 1.5th part 3
+2024/06/06 16:07:17 beforer 2nd part 3
+2024/06/06 16:07:17 beforer 3rd part 3 input leader commit -1
+2024/06/06 16:07:17 beforer for loop commit part 3
+2024/06/06 16:07:17 in for loop commit part lastappplied for 3 is -1 with commitindex -1
+2024/06/06 16:07:17 returning from append entries 3
+2024/06/06 16:07:17 x is recvd serverId:3 term:1 success:true matchedIndex:-1
+2024/06/06 16:07:17 recvd append entry serverId:3 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:07:17 got output serverId:3 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:07:17 in appendentries for 1
+2024/06/06 16:07:17 serveer status for 1 false
+2024/06/06 16:07:17 beforer 1st part 1
+2024/06/06 16:07:17 beforer 1.5th part 1
+2024/06/06 16:07:17 beforer 2nd part 1
+2024/06/06 16:07:17 beforer 3rd part 1 input leader commit -1
+2024/06/06 16:07:17 beforer for loop commit part 1
+2024/06/06 16:07:17 in for loop commit part lastappplied for 1 is -1 with commitindex -1
+2024/06/06 16:07:17 returning from append entries 1
+2024/06/06 16:07:17 in appendentries for 2
+2024/06/06 16:07:17 serveer status for 2 false
+2024/06/06 16:07:17 beforer 1st part 2
+2024/06/06 16:07:17 beforer 1.5th part 2
+2024/06/06 16:07:17 beforer 2nd part 2
+2024/06/06 16:07:17 beforer 3rd part 2 input leader commit -1
+2024/06/06 16:07:17 beforer for loop commit part 2
+2024/06/06 16:07:17 in for loop commit part lastappplied for 2 is -1 with commitindex -1
+2024/06/06 16:07:17 returning from append entries 2
+2024/06/06 16:07:17 x is recvd serverId:2 term:1 success:true matchedIndex:-1
+2024/06/06 16:07:17 recvd append entry serverId:2 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:07:17 got output serverId:2 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:07:17 x is recvd serverId:1 term:1 success:true matchedIndex:-1
+2024/06/06 16:07:17 recvd append entry serverId:1 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:07:17 got output serverId:1 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:07:17 chceking retrying true true [true true true true true] [true true true true true]
+2024/06/06 16:07:18 After sendhearbead 0 log [term:1] nexindex: [0 1 1 1 1] matchedindx: [0 -1 -1 -1 -1]
+2024/06/06 16:07:18 in for loop commit part lastappplied for 0 is -1 with commitindex 0
+2024/06/06 16:07:18 lastappplied for 0 is -1 with commitindex 0
+2024/06/06 16:07:18 in sendheartbeat loop 0
+2024/06/06 16:07:18 in appendentries for 4
+2024/06/06 16:07:18 in appendentries for 3
+2024/06/06 16:07:18 serveer status for 4 false
+2024/06/06 16:07:18 beforer 1st part 4
+2024/06/06 16:07:18 serveer status for 3 false
+2024/06/06 16:07:18 beforer 1.5th part 4
+2024/06/06 16:07:18 beforer 1st part 3
+2024/06/06 16:07:18 beforer 2nd part 4
+2024/06/06 16:07:18 beforer 1.5th part 3
+2024/06/06 16:07:18 beforer 2nd part 3
+2024/06/06 16:07:18 beforer 3rd part 4 input leader commit 0
+2024/06/06 16:07:18 beforer 3rd part 3 input leader commit 0
+2024/06/06 16:07:18 beforer for loop commit part 4
+2024/06/06 16:07:18 beforer for loop commit part 3
+2024/06/06 16:07:18 in for loop commit part lastappplied for 4 is -1 with commitindex 0
+2024/06/06 16:07:18 in for loop commit part lastappplied for 3 is -1 with commitindex 0
+2024/06/06 16:07:18 lastappplied for 4 is -1 with commitindex 0
+2024/06/06 16:07:18 lastappplied for 3 is -1 with commitindex 0
+2024/06/06 16:07:18 returning from append entries 4
+2024/06/06 16:07:18 returning from append entries 3
+2024/06/06 16:07:18 in appendentries for 1
+2024/06/06 16:07:18 serveer status for 1 false
+2024/06/06 16:07:18 beforer 1st part 1
+2024/06/06 16:07:18 beforer 1.5th part 1
+2024/06/06 16:07:18 beforer 2nd part 1
+2024/06/06 16:07:18 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:18 beforer for loop commit part 1
+2024/06/06 16:07:18 in for loop commit part lastappplied for 1 is -1 with commitindex 0
+2024/06/06 16:07:18 lastappplied for 1 is -1 with commitindex 0
+2024/06/06 16:07:18 returning from append entries 1
+2024/06/06 16:07:18 x is recvd serverId:1 term:1 success:true
+2024/06/06 16:07:18 recvd append entry serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:18 x is recvd serverId:4 term:1 success:true
+2024/06/06 16:07:18 recvd append entry serverId:4 term:1 success:true <nil>
+2024/06/06 16:07:18 x is recvd serverId:3 term:1 success:true
+2024/06/06 16:07:18 recvd append entry serverId:3 term:1 success:true <nil>
+2024/06/06 16:07:18 got output serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:18 got output serverId:4 term:1 success:true <nil>
+2024/06/06 16:07:18 got output serverId:3 term:1 success:true <nil>
+2024/06/06 16:07:18 in appendentries for 2
+2024/06/06 16:07:18 serveer status for 2 false
+2024/06/06 16:07:18 beforer 1st part 2
+2024/06/06 16:07:18 beforer 1.5th part 2
+2024/06/06 16:07:18 beforer 2nd part 2
+2024/06/06 16:07:18 beforer 3rd part 2 input leader commit 0
+2024/06/06 16:07:18 beforer for loop commit part 2
+2024/06/06 16:07:18 in for loop commit part lastappplied for 2 is -1 with commitindex 0
+2024/06/06 16:07:18 lastappplied for 2 is -1 with commitindex 0
+2024/06/06 16:07:18 returning from append entries 2
+2024/06/06 16:07:18 x is recvd serverId:2 term:1 success:true
+2024/06/06 16:07:18 recvd append entry serverId:2 term:1 success:true <nil>
+2024/06/06 16:07:18 got output serverId:2 term:1 success:true <nil>
+2024/06/06 16:07:18 chceking retrying true true [true true true true true] [true true true true true]
+2024/06/06 16:07:18 Server 2 is unreachable from map[0:true 1:true]
+2024/06/06 16:07:18 Server 3 is unreachable from map[0:true 1:true]
+2024/06/06 16:07:18 Server 4 is unreachable from map[0:true 1:true]
+2024/06/06 16:07:18 In update file for 0
+2024/06/06 16:07:18 Added to log for 0 log: [term:1 term:1 fileMetaData:{filename:"testFile1" version:1}]
+2024/06/06 16:07:18 in sendheartbeat loop 0
+2024/06/06 16:07:18 in appendentries for 3
+2024/06/06 16:07:18 in appendentries for 4
+2024/06/06 16:07:18 retruning from unreachable 3 3 serverId:3 term:1
+2024/06/06 16:07:18 returning from append entries 3
+2024/06/06 16:07:18 retruning from unreachable 4 4 serverId:4 term:1
+2024/06/06 16:07:18 returning from append entries 4
+2024/06/06 16:07:18 in appendentries for 1
+2024/06/06 16:07:18 serveer status for 1 false
+2024/06/06 16:07:18 beforer 1st part 1
+2024/06/06 16:07:18 beforer 1.5th part 1
+2024/06/06 16:07:18 beforer 2nd part 1
+2024/06/06 16:07:18 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:18 beforer for loop commit part 1
+2024/06/06 16:07:18 in for loop commit part lastappplied for 1 is 0 with commitindex 0
+2024/06/06 16:07:18 returning from append entries 1
+2024/06/06 16:07:18 in appendentries for 2
+2024/06/06 16:07:18 retruning from unreachable 2 2 serverId:2 term:1
+2024/06/06 16:07:18 returning from append entries 2
+2024/06/06 16:07:18 x is recvd serverId:1 term:1 success:true
+2024/06/06 16:07:18 recvd append entry serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:18 got output serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:18 x is recvd <nil>
+2024/06/06 16:07:18 x is recvd <nil>
+2024/06/06 16:07:18 output append serverId:3
+2024/06/06 16:07:18 output append serverId:4
+2024/06/06 16:07:18 recvd append entry serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:18 got output serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:18 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:18 recvd append entry serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:18 is perr online [true true true false true]
+2024/06/06 16:07:18 got output serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:18 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:18 is perr online [true true true false false]
+2024/06/06 16:07:18 x is recvd <nil>
+2024/06/06 16:07:18 output append serverId:2
+2024/06/06 16:07:18 recvd append entry serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:18 got output serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:18 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:18 is perr online [true true false false false]
+2024/06/06 16:07:18 chceking retrying false true [true true false false false] [true true false false false]
+2024/06/06 16:07:19 in sendheartbeat loop 0
+2024/06/06 16:07:19 in appendentries for 4
+2024/06/06 16:07:19 in appendentries for 2
+2024/06/06 16:07:19 retruning from unreachable 4 4 serverId:4 term:1
+2024/06/06 16:07:19 returning from append entries 4
+2024/06/06 16:07:19 retruning from unreachable 2 2 serverId:2 term:1
+2024/06/06 16:07:19 returning from append entries 2
+2024/06/06 16:07:19 in appendentries for 1
+2024/06/06 16:07:19 serveer status for 1 false
+2024/06/06 16:07:19 beforer 1st part 1
+2024/06/06 16:07:19 beforer 1.5th part 1
+2024/06/06 16:07:19 beforer 2nd part 1
+2024/06/06 16:07:19 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:19 beforer for loop commit part 1
+2024/06/06 16:07:19 in for loop commit part lastappplied for 1 is 0 with commitindex 0
+2024/06/06 16:07:19 returning from append entries 1
+2024/06/06 16:07:19 in appendentries for 3
+2024/06/06 16:07:19 retruning from unreachable 3 3 serverId:3 term:1
+2024/06/06 16:07:19 returning from append entries 3
+2024/06/06 16:07:19 x is recvd <nil>
+2024/06/06 16:07:19 output append serverId:4
+2024/06/06 16:07:19 recvd append entry serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:19 got output serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:19 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:19 is perr online [true true true true false]
+2024/06/06 16:07:19 x is recvd <nil>
+2024/06/06 16:07:19 output append serverId:2
+2024/06/06 16:07:19 x is recvd serverId:1 term:1 success:true
+2024/06/06 16:07:19 recvd append entry serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:19 recvd append entry serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:19 got output serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:19 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:19 is perr online [true true false true false]
+2024/06/06 16:07:19 got output serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:19 x is recvd <nil>
+2024/06/06 16:07:19 output append serverId:3
+2024/06/06 16:07:19 recvd append entry serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:19 got output serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:19 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:19 is perr online [true true false false false]
+2024/06/06 16:07:19 chceking retrying false true [true true false false false] [true true false false false]
+2024/06/06 16:07:19 in sendheartbeat loop 0
+2024/06/06 16:07:19 in appendentries for 3
+2024/06/06 16:07:19 retruning from unreachable 3 3 serverId:3 term:1
+2024/06/06 16:07:19 returning from append entries 3
+2024/06/06 16:07:19 in appendentries for 2
+2024/06/06 16:07:19 retruning from unreachable 2 2 serverId:2 term:1
+2024/06/06 16:07:19 returning from append entries 2
+2024/06/06 16:07:19 in appendentries for 1
+2024/06/06 16:07:19 serveer status for 1 false
+2024/06/06 16:07:19 beforer 1st part 1
+2024/06/06 16:07:19 beforer 1.5th part 1
+2024/06/06 16:07:19 beforer 2nd part 1
+2024/06/06 16:07:19 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:19 beforer for loop commit part 1
+2024/06/06 16:07:19 in for loop commit part lastappplied for 1 is 0 with commitindex 0
+2024/06/06 16:07:19 returning from append entries 1
+2024/06/06 16:07:19 in appendentries for 4
+2024/06/06 16:07:19 retruning from unreachable 4 4 serverId:4 term:1
+2024/06/06 16:07:19 returning from append entries 4
+2024/06/06 16:07:19 x is recvd <nil>
+2024/06/06 16:07:19 output append serverId:2
+2024/06/06 16:07:19 recvd append entry serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:19 got output serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:19 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:19 is perr online [true true false true true]
+2024/06/06 16:07:19 x is recvd <nil>
+2024/06/06 16:07:19 output append serverId:3
+2024/06/06 16:07:19 recvd append entry serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:19 got output serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:19 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:19 is perr online [true true false false true]
+2024/06/06 16:07:19 x is recvd serverId:1 term:1 success:true
+2024/06/06 16:07:19 recvd append entry serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:19 got output serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:19 x is recvd <nil>
+2024/06/06 16:07:19 output append serverId:4
+2024/06/06 16:07:19 recvd append entry serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:19 got output serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:19 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:19 is perr online [true true false false false]
+2024/06/06 16:07:19 chceking retrying false true [true true false false false] [true true false false false]
+2024/06/06 16:07:20 in sendheartbeat loop 0
+2024/06/06 16:07:20 in appendentries for 2
+2024/06/06 16:07:20 in appendentries for 4
+2024/06/06 16:07:20 retruning from unreachable 4 4 serverId:4 term:1
+2024/06/06 16:07:20 retruning from unreachable 2 2 serverId:2 term:1
+2024/06/06 16:07:20 in appendentries for 1
+2024/06/06 16:07:20 returning from append entries 4
+2024/06/06 16:07:20 returning from append entries 2
+2024/06/06 16:07:20 serveer status for 1 false
+2024/06/06 16:07:20 beforer 1st part 1
+2024/06/06 16:07:20 beforer 1.5th part 1
+2024/06/06 16:07:20 beforer 2nd part 1
+2024/06/06 16:07:20 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:20 beforer for loop commit part 1
+2024/06/06 16:07:20 in for loop commit part lastappplied for 1 is 0 with commitindex 0
+2024/06/06 16:07:20 returning from append entries 1
+2024/06/06 16:07:20 in appendentries for 3
+2024/06/06 16:07:20 retruning from unreachable 3 3 serverId:3 term:1
+2024/06/06 16:07:20 returning from append entries 3
+2024/06/06 16:07:20 x is recvd <nil>
+2024/06/06 16:07:20 output append serverId:4
+2024/06/06 16:07:20 recvd append entry serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:20 got output serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:20 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:20 is perr online [true true true true false]
+2024/06/06 16:07:20 x is recvd <nil>
+2024/06/06 16:07:20 output append serverId:2
+2024/06/06 16:07:20 recvd append entry serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:20 got output serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:20 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:20 is perr online [true true false true false]
+2024/06/06 16:07:20 x is recvd serverId:1 term:1 success:true
+2024/06/06 16:07:20 recvd append entry serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:20 got output serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:20 x is recvd <nil>
+2024/06/06 16:07:20 output append serverId:3
+2024/06/06 16:07:20 recvd append entry serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:20 got output serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:20 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:20 is perr online [true true false false false]
+2024/06/06 16:07:20 chceking retrying false true [true true false false false] [true true false false false]
+2024/06/06 16:07:20 in sendheartbeat loop 0
+2024/06/06 16:07:20 in appendentries for 4
+2024/06/06 16:07:20 retruning from unreachable 4 4 serverId:4 term:1
+2024/06/06 16:07:20 returning from append entries 4
+2024/06/06 16:07:20 in appendentries for 3
+2024/06/06 16:07:20 retruning from unreachable 3 3 serverId:3 term:1
+2024/06/06 16:07:20 returning from append entries 3
+2024/06/06 16:07:20 in appendentries for 2
+2024/06/06 16:07:20 retruning from unreachable 2 2 serverId:2 term:1
+2024/06/06 16:07:20 returning from append entries 2
+2024/06/06 16:07:20 in appendentries for 1
+2024/06/06 16:07:20 serveer status for 1 false
+2024/06/06 16:07:20 beforer 1st part 1
+2024/06/06 16:07:20 beforer 1.5th part 1
+2024/06/06 16:07:20 beforer 2nd part 1
+2024/06/06 16:07:20 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:20 beforer for loop commit part 1
+2024/06/06 16:07:20 in for loop commit part lastappplied for 1 is 0 with commitindex 0
+2024/06/06 16:07:20 returning from append entries 1
+2024/06/06 16:07:20 x is recvd <nil>
+2024/06/06 16:07:20 x is recvd <nil>
+2024/06/06 16:07:20 output append serverId:4
+2024/06/06 16:07:20 recvd append entry serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:20 got output serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:20 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:20 is perr online [true true true true false]
+2024/06/06 16:07:20 x is recvd <nil>
+2024/06/06 16:07:20 output append serverId:3
+2024/06/06 16:07:20 recvd append entry serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:20 got output serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:20 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:20 is perr online [true true true false false]
+2024/06/06 16:07:20 output append serverId:2
+2024/06/06 16:07:20 recvd append entry serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:20 x is recvd serverId:1 term:1 success:true
+2024/06/06 16:07:20 got output serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:20 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:20 recvd append entry serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:20 is perr online [true true false false false]
+2024/06/06 16:07:20 got output serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:20 chceking retrying false true [true true false false false] [true true false false false]
+2024/06/06 16:07:21 in sendheartbeat loop 0
+2024/06/06 16:07:21 in appendentries for 2
+2024/06/06 16:07:21 retruning from unreachable 2 2 serverId:2 term:1
+2024/06/06 16:07:21 returning from append entries 2
+2024/06/06 16:07:21 in appendentries for 3
+2024/06/06 16:07:21 retruning from unreachable 3 3 serverId:3 term:1
+2024/06/06 16:07:21 returning from append entries 3
+2024/06/06 16:07:21 in appendentries for 4
+2024/06/06 16:07:21 in appendentries for 1
+2024/06/06 16:07:21 retruning from unreachable 4 4 serverId:4 term:1
+2024/06/06 16:07:21 returning from append entries 4
+2024/06/06 16:07:21 serveer status for 1 false
+2024/06/06 16:07:21 beforer 1st part 1
+2024/06/06 16:07:21 beforer 1.5th part 1
+2024/06/06 16:07:21 beforer 2nd part 1
+2024/06/06 16:07:21 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:21 beforer for loop commit part 1
+2024/06/06 16:07:21 in for loop commit part lastappplied for 1 is 0 with commitindex 0
+2024/06/06 16:07:21 returning from append entries 1
+2024/06/06 16:07:21 x is recvd <nil>
+2024/06/06 16:07:21 output append serverId:3
+2024/06/06 16:07:21 recvd append entry serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 got output serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 is perr online [true true true false true]
+2024/06/06 16:07:21 x is recvd serverId:1 term:1 success:true
+2024/06/06 16:07:21 recvd append entry serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:21 got output serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:21 x is recvd <nil>
+2024/06/06 16:07:21 x is recvd <nil>
+2024/06/06 16:07:21 output append serverId:4
+2024/06/06 16:07:21 output append serverId:2
+2024/06/06 16:07:21 recvd append entry serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 recvd append entry serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 got output serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 is perr online [true true false false true]
+2024/06/06 16:07:21 got output serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 is perr online [true true false false false]
+2024/06/06 16:07:21 chceking retrying false true [true true false false false] [true true false false false]
+2024/06/06 16:07:21 in sendheartbeat loop 0
+2024/06/06 16:07:21 in appendentries for 2
+2024/06/06 16:07:21 in appendentries for 3
+2024/06/06 16:07:21 retruning from unreachable 2 2 serverId:2 term:1
+2024/06/06 16:07:21 returning from append entries 2
+2024/06/06 16:07:21 retruning from unreachable 3 3 serverId:3 term:1
+2024/06/06 16:07:21 returning from append entries 3
+2024/06/06 16:07:21 in appendentries for 1
+2024/06/06 16:07:21 serveer status for 1 false
+2024/06/06 16:07:21 beforer 1st part 1
+2024/06/06 16:07:21 beforer 1.5th part 1
+2024/06/06 16:07:21 beforer 2nd part 1
+2024/06/06 16:07:21 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:21 beforer for loop commit part 1
+2024/06/06 16:07:21 in for loop commit part lastappplied for 1 is 0 with commitindex 0
+2024/06/06 16:07:21 returning from append entries 1
+2024/06/06 16:07:21 in appendentries for 4
+2024/06/06 16:07:21 retruning from unreachable 4 4 serverId:4 term:1
+2024/06/06 16:07:21 returning from append entries 4
+2024/06/06 16:07:21 x is recvd <nil>
+2024/06/06 16:07:21 x is recvd <nil>
+2024/06/06 16:07:21 output append serverId:2
+2024/06/06 16:07:21 output append serverId:3
+2024/06/06 16:07:21 x is recvd <nil>
+2024/06/06 16:07:21 recvd append entry serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 output append serverId:4
+2024/06/06 16:07:21 got output serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 recvd append entry serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 is perr online [true true true false true]
+2024/06/06 16:07:21 got output serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 is perr online [true true true false false]
+2024/06/06 16:07:21 recvd append entry serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 got output serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 is perr online [true true false false false]
+2024/06/06 16:07:21 x is recvd serverId:1 term:1 success:true
+2024/06/06 16:07:21 recvd append entry serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:21 got output serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:21 chceking retrying false true [true true false false false] [true true false false false]
+2024/06/06 16:07:21 in sendheartbeat loop 0
+2024/06/06 16:07:21 in appendentries for 4
+2024/06/06 16:07:21 retruning from unreachable 4 4 serverId:4 term:1
+2024/06/06 16:07:21 returning from append entries 4
+2024/06/06 16:07:21 in appendentries for 2
+2024/06/06 16:07:21 retruning from unreachable 2 2 serverId:2 term:1
+2024/06/06 16:07:21 returning from append entries 2
+2024/06/06 16:07:21 in appendentries for 1
+2024/06/06 16:07:21 serveer status for 1 false
+2024/06/06 16:07:21 beforer 1st part 1
+2024/06/06 16:07:21 beforer 1.5th part 1
+2024/06/06 16:07:21 beforer 2nd part 1
+2024/06/06 16:07:21 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:21 beforer for loop commit part 1
+2024/06/06 16:07:21 in for loop commit part lastappplied for 1 is 0 with commitindex 0
+2024/06/06 16:07:21 returning from append entries 1
+2024/06/06 16:07:21 in appendentries for 3
+2024/06/06 16:07:21 retruning from unreachable 3 3 serverId:3 term:1
+2024/06/06 16:07:21 returning from append entries 3
+2024/06/06 16:07:21 x is recvd <nil>
+2024/06/06 16:07:21 output append serverId:4
+2024/06/06 16:07:21 recvd append entry serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 got output serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 is perr online [true true true true false]
+2024/06/06 16:07:21 x is recvd <nil>
+2024/06/06 16:07:21 output append serverId:2
+2024/06/06 16:07:21 recvd append entry serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 got output serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 x is recvd serverId:1 term:1 success:true
+2024/06/06 16:07:21 recvd append entry serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:21 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 is perr online [true true false true false]
+2024/06/06 16:07:21 got output serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:21 x is recvd <nil>
+2024/06/06 16:07:21 output append serverId:3
+2024/06/06 16:07:21 recvd append entry serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 got output serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:21 is perr online [true true false false false]
+2024/06/06 16:07:21 chceking retrying false true [true true false false false] [true true false false false]
+2024/06/06 16:07:22 in sendheartbeat loop 0
+2024/06/06 16:07:22 in appendentries for 4
+2024/06/06 16:07:22 retruning from unreachable 4 4 serverId:4 term:1
+2024/06/06 16:07:22 returning from append entries 4
+2024/06/06 16:07:22 in appendentries for 1
+2024/06/06 16:07:22 in appendentries for 2
+2024/06/06 16:07:22 serveer status for 1 false
+2024/06/06 16:07:22 beforer 1st part 1
+2024/06/06 16:07:22 beforer 1.5th part 1
+2024/06/06 16:07:22 beforer 2nd part 1
+2024/06/06 16:07:22 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:22 beforer for loop commit part 1
+2024/06/06 16:07:22 retruning from unreachable 2 2 serverId:2 term:1
+2024/06/06 16:07:22 in for loop commit part lastappplied for 1 is 0 with commitindex 0
+2024/06/06 16:07:22 returning from append entries 1
+2024/06/06 16:07:22 returning from append entries 2
+2024/06/06 16:07:22 in appendentries for 3
+2024/06/06 16:07:22 retruning from unreachable 3 3 serverId:3 term:1
+2024/06/06 16:07:22 returning from append entries 3
+2024/06/06 16:07:22 x is recvd <nil>
+2024/06/06 16:07:22 output append serverId:3
+2024/06/06 16:07:22 x is recvd <nil>
+2024/06/06 16:07:22 x is recvd <nil>
+2024/06/06 16:07:22 output append serverId:4
+2024/06/06 16:07:22 recvd append entry serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:22 recvd append entry serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:22 output append serverId:2
+2024/06/06 16:07:22 got output serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:22 recvd append entry serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:22 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:22 x is recvd serverId:1 term:1 success:true
+2024/06/06 16:07:22 is perr online [true true true false true]
+2024/06/06 16:07:22 recvd append entry serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:22 got output serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:22 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:22 is perr online [true true true false false]
+2024/06/06 16:07:22 got output serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:22 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:22 is perr online [true true false false false]
+2024/06/06 16:07:22 got output serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:22 chceking retrying false true [true true false false false] [true true false false false]
+2024/06/06 16:07:22 in sendheartbeat loop 0
+2024/06/06 16:07:22 in appendentries for 1
+2024/06/06 16:07:22 serveer status for 1 false
+2024/06/06 16:07:22 beforer 1st part 1
+2024/06/06 16:07:22 beforer 1.5th part 1
+2024/06/06 16:07:22 beforer 2nd part 1
+2024/06/06 16:07:22 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:22 beforer for loop commit part 1
+2024/06/06 16:07:22 in for loop commit part lastappplied for 1 is 0 with commitindex 0
+2024/06/06 16:07:22 returning from append entries 1
+2024/06/06 16:07:22 in appendentries for 4
+2024/06/06 16:07:22 in appendentries for 2
+2024/06/06 16:07:22 retruning from unreachable 4 4 serverId:4 term:1
+2024/06/06 16:07:22 retruning from unreachable 2 2 serverId:2 term:1
+2024/06/06 16:07:22 returning from append entries 4
+2024/06/06 16:07:22 returning from append entries 2
+2024/06/06 16:07:22 in appendentries for 3
+2024/06/06 16:07:22 x is recvd <nil>
+2024/06/06 16:07:22 retruning from unreachable 3 3 serverId:3 term:1
+2024/06/06 16:07:22 returning from append entries 3
+2024/06/06 16:07:22 output append serverId:4
+2024/06/06 16:07:22 x is recvd <nil>
+2024/06/06 16:07:22 recvd append entry serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:22 got output serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:22 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:22 output append serverId:2
+2024/06/06 16:07:22 is perr online [true true true true false]
+2024/06/06 16:07:22 recvd append entry serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:22 got output serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:22 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:22 is perr online [true true false true false]
+2024/06/06 16:07:22 x is recvd serverId:1 term:1 success:true
+2024/06/06 16:07:22 recvd append entry serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:22 got output serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:22 x is recvd <nil>
+2024/06/06 16:07:22 output append serverId:3
+2024/06/06 16:07:22 recvd append entry serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:22 got output serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:22 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:22 is perr online [true true false false false]
+2024/06/06 16:07:22 chceking retrying false true [true true false false false] [true true false false false]
+2024/06/06 16:07:23 in sendheartbeat loop 0
+2024/06/06 16:07:23 in appendentries for 2
+2024/06/06 16:07:23 retruning from unreachable 2 2 serverId:2 term:1
+2024/06/06 16:07:23 returning from append entries 2
+2024/06/06 16:07:23 in appendentries for 1
+2024/06/06 16:07:23 serveer status for 1 false
+2024/06/06 16:07:23 beforer 1st part 1
+2024/06/06 16:07:23 beforer 1.5th part 1
+2024/06/06 16:07:23 beforer 2nd part 1
+2024/06/06 16:07:23 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:23 beforer for loop commit part 1
+2024/06/06 16:07:23 in for loop commit part lastappplied for 1 is 0 with commitindex 0
+2024/06/06 16:07:23 returning from append entries 1
+2024/06/06 16:07:23 x is recvd <nil>
+2024/06/06 16:07:23 output append serverId:2
+2024/06/06 16:07:23 recvd append entry serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:23 got output serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:23 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:23 is perr online [true true false true true]
+2024/06/06 16:07:23 x is recvd serverId:1 term:1 success:true
+2024/06/06 16:07:23 recvd append entry serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:23 got output serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:23 in appendentries for 3
+2024/06/06 16:07:23 in appendentries for 4
+2024/06/06 16:07:23 retruning from unreachable 4 4 serverId:4 term:1
+2024/06/06 16:07:23 retruning from unreachable 3 3 serverId:3 term:1
+2024/06/06 16:07:23 returning from append entries 4
+2024/06/06 16:07:23 returning from append entries 3
+2024/06/06 16:07:23 x is recvd <nil>
+2024/06/06 16:07:23 x is recvd <nil>
+2024/06/06 16:07:23 output append serverId:4
+2024/06/06 16:07:23 recvd append entry serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:23 output append serverId:3
+2024/06/06 16:07:23 recvd append entry serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:23 got output serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:23 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:23 is perr online [true true false true false]
+2024/06/06 16:07:23 got output serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:23 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:23 is perr online [true true false false false]
+2024/06/06 16:07:23 chceking retrying false true [true true false false false] [true true false false false]
+2024/06/06 16:07:23 in sendheartbeat loop 0
+2024/06/06 16:07:23 in appendentries for 2
+2024/06/06 16:07:23 in appendentries for 1
+2024/06/06 16:07:23 serveer status for 1 false
+2024/06/06 16:07:23 beforer 1st part 1
+2024/06/06 16:07:23 beforer 1.5th part 1
+2024/06/06 16:07:23 beforer 2nd part 1
+2024/06/06 16:07:23 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:23 beforer for loop commit part 1
+2024/06/06 16:07:23 in for loop commit part lastappplied for 1 is 0 with commitindex 0
+2024/06/06 16:07:23 returning from append entries 1
+2024/06/06 16:07:23 retruning from unreachable 2 2 serverId:2 term:1
+2024/06/06 16:07:23 returning from append entries 2
+2024/06/06 16:07:23 in appendentries for 4
+2024/06/06 16:07:23 retruning from unreachable 4 4 serverId:4 term:1
+2024/06/06 16:07:23 returning from append entries 4
+2024/06/06 16:07:23 in appendentries for 3
+2024/06/06 16:07:23 retruning from unreachable 3 3 serverId:3 term:1
+2024/06/06 16:07:23 returning from append entries 3
+2024/06/06 16:07:23 x is recvd <nil>
+2024/06/06 16:07:23 output append serverId:2
+2024/06/06 16:07:23 recvd append entry serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:23 got output serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:23 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:23 x is recvd <nil>
+2024/06/06 16:07:23 is perr online [true true false true true]
+2024/06/06 16:07:23 output append serverId:4
+2024/06/06 16:07:23 recvd append entry serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:23 got output serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:23 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:23 is perr online [true true false true false]
+2024/06/06 16:07:23 x is recvd <nil>
+2024/06/06 16:07:23 x is recvd serverId:1 term:1 success:true
+2024/06/06 16:07:23 output append serverId:3
+2024/06/06 16:07:23 recvd append entry serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:23 recvd append entry serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:23 got output serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:23 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:23 is perr online [true true false false false]
+2024/06/06 16:07:23 got output serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:23 chceking retrying false true [true true false false false] [true true false false false]
+2024/06/06 16:07:23 In update file for 2
+2024/06/06 16:07:23 Added to log for 2 log: [term:1 term:2]
+2024/06/06 16:07:23 in sendheartbeat loop 2
+2024/06/06 16:07:23 in appendentries for 0
+2024/06/06 16:07:23 serveer status for 0 false
+2024/06/06 16:07:23 beforer 1st part 0
+2024/06/06 16:07:23 beforer 1.5th part 0
+2024/06/06 16:07:23 beforer 2nd part 0
+2024/06/06 16:07:23 beforer 3rd part 0 input leader commit 0
+2024/06/06 16:07:23 beforer for loop commit part 0
+2024/06/06 16:07:23 in for loop commit part lastappplied for 0 is 0 with commitindex 0
+2024/06/06 16:07:23 returning from append entries 0
+2024/06/06 16:07:23 x is recvd term:2 success:true
+2024/06/06 16:07:23 recvd append entry term:2 success:true <nil>
+2024/06/06 16:07:23 got output term:2 success:true <nil>
+2024/06/06 16:07:23 in appendentries for 3
+2024/06/06 16:07:23 serveer status for 3 false
+2024/06/06 16:07:23 beforer 1st part 3
+2024/06/06 16:07:23 in appendentries for 4
+2024/06/06 16:07:23 beforer 1.5th part 3
+2024/06/06 16:07:23 beforer 2nd part 3
+2024/06/06 16:07:23 beforer 3rd part 3 input leader commit 0
+2024/06/06 16:07:23 serveer status for 4 false
+2024/06/06 16:07:23 beforer for loop commit part 3
+2024/06/06 16:07:23 beforer 1st part 4
+2024/06/06 16:07:23 beforer 1.5th part 4
+2024/06/06 16:07:23 in for loop commit part lastappplied for 3 is 0 with commitindex 0
+2024/06/06 16:07:23 beforer 2nd part 4
+2024/06/06 16:07:23 returning from append entries 3
+2024/06/06 16:07:23 beforer 3rd part 4 input leader commit 0
+2024/06/06 16:07:23 beforer for loop commit part 4
+2024/06/06 16:07:23 in for loop commit part lastappplied for 4 is 0 with commitindex 0
+2024/06/06 16:07:23 returning from append entries 4
+2024/06/06 16:07:23 in appendentries for 1
+2024/06/06 16:07:23 serveer status for 1 false
+2024/06/06 16:07:23 beforer 1st part 1
+2024/06/06 16:07:23 beforer 1.5th part 1
+2024/06/06 16:07:23 beforer 2nd part 1
+2024/06/06 16:07:23 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:23 beforer for loop commit part 1
+2024/06/06 16:07:23 in for loop commit part lastappplied for 1 is 0 with commitindex 0
+2024/06/06 16:07:23 returning from append entries 1
+2024/06/06 16:07:23 x is recvd serverId:3 term:2 success:true
+2024/06/06 16:07:23 recvd append entry serverId:3 term:2 success:true <nil>
+2024/06/06 16:07:23 got output serverId:3 term:2 success:true <nil>
+2024/06/06 16:07:23 x is recvd serverId:4 term:2 success:true
+2024/06/06 16:07:23 recvd append entry serverId:4 term:2 success:true <nil>
+2024/06/06 16:07:23 got output serverId:4 term:2 success:true <nil>
+2024/06/06 16:07:23 x is recvd serverId:1 term:2 success:true
+2024/06/06 16:07:23 recvd append entry serverId:1 term:2 success:true <nil>
+2024/06/06 16:07:23 got output serverId:1 term:2 success:true <nil>
+2024/06/06 16:07:23 chceking retrying true true [true true true true true] [true true true true true]
+2024/06/06 16:07:24 in sendheartbeat loop 0
+2024/06/06 16:07:24 in appendentries for 1
+2024/06/06 16:07:24 in appendentries for 2
+2024/06/06 16:07:24 serveer status for 1 false
+2024/06/06 16:07:24 beforer 1st part 1
+2024/06/06 16:07:24 beforer 1.5th part 1
+2024/06/06 16:07:24 beforer 2nd part 1
+2024/06/06 16:07:24 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:24 beforer for loop commit part 1
+2024/06/06 16:07:24 in for loop commit part lastappplied for 1 is 0 with commitindex 0
+2024/06/06 16:07:24 returning from append entries 1
+2024/06/06 16:07:24 retruning from unreachable 2 2 serverId:2 term:2
+2024/06/06 16:07:24 returning from append entries 2
+2024/06/06 16:07:24 in appendentries for 4
+2024/06/06 16:07:24 in appendentries for 3
+2024/06/06 16:07:24 retruning from unreachable 4 4 serverId:4 term:2
+2024/06/06 16:07:24 returning from append entries 4
+2024/06/06 16:07:24 retruning from unreachable 3 3 serverId:3 term:2
+2024/06/06 16:07:24 returning from append entries 3
+2024/06/06 16:07:24 x is recvd <nil>
+2024/06/06 16:07:24 output append serverId:2
+2024/06/06 16:07:24 recvd append entry serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:24 got output serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:24 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:24 is perr online [true true false true true]
+2024/06/06 16:07:24 x is recvd <nil>
+2024/06/06 16:07:24 output append serverId:4
+2024/06/06 16:07:24 recvd append entry serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:24 got output serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:24 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:24 is perr online [true true false true false]
+2024/06/06 16:07:24 x is recvd <nil>
+2024/06/06 16:07:24 x is recvd serverId:1 term:2 success:true
+2024/06/06 16:07:24 recvd append entry serverId:1 term:2 success:true <nil>
+2024/06/06 16:07:24 output append serverId:3
+2024/06/06 16:07:24 got output serverId:1 term:2 success:true <nil>
+2024/06/06 16:07:24 recvd append entry serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:24 got output serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:24 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:24 is perr online [true true false false false]
+2024/06/06 16:07:24 chceking retrying false true [true true false false false] [true true false false false]
+2024/06/06 16:07:24 After sendhearbead 2 log [term:1 term:2] nexindex: [2 2 0 2 2] matchedindx: [0 0 0 0 0]
+2024/06/06 16:07:24 in for loop commit part lastappplied for 2 is 0 with commitindex 1
+2024/06/06 16:07:24 lastappplied for 2 is 0 with commitindex 1
+2024/06/06 16:07:24 in sendheartbeat loop 2
+2024/06/06 16:07:24 in appendentries for 1
+2024/06/06 16:07:24 serveer status for 1 false
+2024/06/06 16:07:24 beforer 1st part 1
+2024/06/06 16:07:24 beforer 1.5th part 1
+2024/06/06 16:07:24 beforer 2nd part 1
+2024/06/06 16:07:24 beforer 3rd part 1 input leader commit 1
+2024/06/06 16:07:24 beforer for loop commit part 1
+2024/06/06 16:07:24 in for loop commit part lastappplied for 1 is 0 with commitindex 1
+2024/06/06 16:07:24 lastappplied for 1 is 0 with commitindex 1
+2024/06/06 16:07:24 returning from append entries 1
+2024/06/06 16:07:24 in appendentries for 0
+2024/06/06 16:07:24 serveer status for 0 false
+2024/06/06 16:07:24 beforer 1st part 0
+2024/06/06 16:07:24 beforer 1.5th part 0
+2024/06/06 16:07:24 beforer 2nd part 0
+2024/06/06 16:07:24 beforer 3rd part 0 input leader commit 1
+2024/06/06 16:07:24 beforer for loop commit part 0
+2024/06/06 16:07:24 in for loop commit part lastappplied for 0 is 0 with commitindex 1
+2024/06/06 16:07:24 lastappplied for 0 is 0 with commitindex 1
+2024/06/06 16:07:24 returning from append entries 0
+2024/06/06 16:07:24 in appendentries for 3
+2024/06/06 16:07:24 serveer status for 3 false
+2024/06/06 16:07:24 beforer 1st part 3
+2024/06/06 16:07:24 beforer 1.5th part 3
+2024/06/06 16:07:24 beforer 2nd part 3
+2024/06/06 16:07:24 beforer 3rd part 3 input leader commit 1
+2024/06/06 16:07:24 beforer for loop commit part 3
+2024/06/06 16:07:24 in for loop commit part lastappplied for 3 is 0 with commitindex 1
+2024/06/06 16:07:24 lastappplied for 3 is 0 with commitindex 1
+2024/06/06 16:07:24 returning from append entries 3
+2024/06/06 16:07:24 in appendentries for 4
+2024/06/06 16:07:24 serveer status for 4 false
+2024/06/06 16:07:24 beforer 1st part 4
+2024/06/06 16:07:24 x is recvd serverId:1 term:2 success:true matchedIndex:1
+2024/06/06 16:07:24 beforer 1.5th part 4
+2024/06/06 16:07:24 recvd append entry serverId:1 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:24 beforer 2nd part 4
+2024/06/06 16:07:24 beforer 3rd part 4 input leader commit 1
+2024/06/06 16:07:24 beforer for loop commit part 4
+2024/06/06 16:07:24 in for loop commit part lastappplied for 4 is 0 with commitindex 1
+2024/06/06 16:07:24 lastappplied for 4 is 0 with commitindex 1
+2024/06/06 16:07:24 got output serverId:1 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:24 returning from append entries 4
+2024/06/06 16:07:24 x is recvd serverId:3 term:2 success:true matchedIndex:1
+2024/06/06 16:07:24 recvd append entry serverId:3 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:24 got output serverId:3 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:24 x is recvd term:2 success:true matchedIndex:1
+2024/06/06 16:07:24 recvd append entry term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:24 got output term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:24 x is recvd serverId:4 term:2 success:true matchedIndex:1
+2024/06/06 16:07:24 recvd append entry serverId:4 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:24 got output serverId:4 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:24 chceking retrying true true [true true true true true] [true true true true true]
+2024/06/06 16:07:24 in sendheartbeat loop 0
+2024/06/06 16:07:24 in appendentries for 1
+2024/06/06 16:07:24 in appendentries for 3
+2024/06/06 16:07:24 serveer status for 1 false
+2024/06/06 16:07:24 beforer 1st part 1
+2024/06/06 16:07:24 beforer 1.5th part 1
+2024/06/06 16:07:24 beforer 2nd part 1
+2024/06/06 16:07:24 beforer 3rd part 1 input leader commit 1
+2024/06/06 16:07:24 beforer for loop commit part 1
+2024/06/06 16:07:24 in for loop commit part lastappplied for 1 is 1 with commitindex 1
+2024/06/06 16:07:24 returning from append entries 1
+2024/06/06 16:07:24 retruning from unreachable 3 3 serverId:3 term:2 matchedIndex:1
+2024/06/06 16:07:24 returning from append entries 3
+2024/06/06 16:07:24 in appendentries for 4
+2024/06/06 16:07:24 in appendentries for 2
+2024/06/06 16:07:24 retruning from unreachable 2 2 serverId:2 term:2 matchedIndex:1
+2024/06/06 16:07:24 returning from append entries 2
+2024/06/06 16:07:24 retruning from unreachable 4 4 serverId:4 term:2 matchedIndex:1
+2024/06/06 16:07:24 returning from append entries 4
+2024/06/06 16:07:24 x is recvd <nil>
+2024/06/06 16:07:24 output append serverId:3
+2024/06/06 16:07:24 recvd append entry serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:24 x is recvd serverId:1 term:2 success:true matchedIndex:1
+2024/06/06 16:07:24 recvd append entry serverId:1 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:24 got output serverId:3 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:24 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:24 is perr online [true true true false true]
+2024/06/06 16:07:24 got output serverId:1 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:24 x is recvd <nil>
+2024/06/06 16:07:24 output append serverId:4
+2024/06/06 16:07:24 recvd append entry serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:24 x is recvd <nil>
+2024/06/06 16:07:24 got output serverId:4 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:24 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:24 is perr online [true true true false false]
+2024/06/06 16:07:24 output append serverId:2
+2024/06/06 16:07:24 recvd append entry serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:24 got output serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:24 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:24 is perr online [true true false false false]
+2024/06/06 16:07:24 chceking retrying false true [true true false false false] [true true false false false]
+2024/06/06 16:07:24 Server 2 is reachable from all servers
+2024/06/06 16:07:24 Server 3 is reachable from all servers
+2024/06/06 16:07:24 Server 4 is reachable from all servers
+2024/06/06 16:07:24 in sendheartbeat loop 2
+2024/06/06 16:07:24 in appendentries for 4
+2024/06/06 16:07:24 serveer status for 4 false
+2024/06/06 16:07:24 beforer 1st part 4
+2024/06/06 16:07:24 beforer 1.5th part 4
+2024/06/06 16:07:24 beforer 2nd part 4
+2024/06/06 16:07:24 in appendentries for 0
+2024/06/06 16:07:24 in appendentries for 3
+2024/06/06 16:07:24 beforer 3rd part 4 input leader commit 1
+2024/06/06 16:07:24 serveer status for 0 false
+2024/06/06 16:07:24 beforer for loop commit part 4
+2024/06/06 16:07:24 serveer status for 3 false
+2024/06/06 16:07:24 beforer 1st part 0
+2024/06/06 16:07:24 beforer 1st part 3
+2024/06/06 16:07:24 beforer 1.5th part 0
+2024/06/06 16:07:24 beforer 1.5th part 3
+2024/06/06 16:07:24 in for loop commit part lastappplied for 4 is 1 with commitindex 1
+2024/06/06 16:07:24 beforer 2nd part 0
+2024/06/06 16:07:24 beforer 2nd part 3
+2024/06/06 16:07:24 returning from append entries 4
+2024/06/06 16:07:24 beforer 3rd part 3 input leader commit 1
+2024/06/06 16:07:24 beforer 3rd part 0 input leader commit 1
+2024/06/06 16:07:24 beforer for loop commit part 3
+2024/06/06 16:07:24 beforer for loop commit part 0
+2024/06/06 16:07:24 in for loop commit part lastappplied for 3 is 1 with commitindex 1
+2024/06/06 16:07:24 in for loop commit part lastappplied for 0 is 1 with commitindex 1
+2024/06/06 16:07:24 returning from append entries 3
+2024/06/06 16:07:24 returning from append entries 0
+2024/06/06 16:07:24 in appendentries for 1
+2024/06/06 16:07:24 serveer status for 1 false
+2024/06/06 16:07:24 beforer 1st part 1
+2024/06/06 16:07:24 beforer 1.5th part 1
+2024/06/06 16:07:24 beforer 2nd part 1
+2024/06/06 16:07:24 beforer 3rd part 1 input leader commit 1
+2024/06/06 16:07:24 beforer for loop commit part 1
+2024/06/06 16:07:24 in for loop commit part lastappplied for 1 is 1 with commitindex 1
+2024/06/06 16:07:24 returning from append entries 1
+2024/06/06 16:07:24 x is recvd serverId:1 term:2 success:true matchedIndex:1
+2024/06/06 16:07:24 recvd append entry serverId:1 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:24 x is recvd term:2 success:true matchedIndex:1
+2024/06/06 16:07:24 x is recvd serverId:3 term:2 success:true matchedIndex:1
+2024/06/06 16:07:24 got output serverId:1 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:24 x is recvd serverId:4 term:2 success:true matchedIndex:1
+2024/06/06 16:07:24 recvd append entry serverId:4 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:24 recvd append entry term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:24 got output serverId:4 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:24 recvd append entry serverId:3 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:24 got output term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:24 got output serverId:3 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:24 chceking retrying true true [true true true true true] [true true true true true]
+2024/06/06 16:07:25 in sendheartbeat loop 0
+2024/06/06 16:07:25 in appendentries for 2
+2024/06/06 16:07:25 in appendentries for 3
+2024/06/06 16:07:25 serveer status for 3 false
+2024/06/06 16:07:25 serveer status for 2 false
+2024/06/06 16:07:25 beforer 1st part 3
+2024/06/06 16:07:25 beforer 1st part 2
+2024/06/06 16:07:25 beforer 1.5th part 3
+2024/06/06 16:07:25 beforer 1.5th part 2
+2024/06/06 16:07:25 beforer 2nd part 3
+2024/06/06 16:07:25 beforer 2nd part 2
+2024/06/06 16:07:25 beforer 3rd part 3 input leader commit 1
+2024/06/06 16:07:25 beforer 3rd part 2 input leader commit 1
+2024/06/06 16:07:25 in appendentries for 4
+2024/06/06 16:07:25 beforer for loop commit part 3
+2024/06/06 16:07:25 beforer for loop commit part 2
+2024/06/06 16:07:25 in for loop commit part lastappplied for 2 is 1 with commitindex 1
+2024/06/06 16:07:25 returning from append entries 2
+2024/06/06 16:07:25 in for loop commit part lastappplied for 3 is 1 with commitindex 1
+2024/06/06 16:07:25 serveer status for 4 false
+2024/06/06 16:07:25 returning from append entries 3
+2024/06/06 16:07:25 beforer 1st part 4
+2024/06/06 16:07:25 beforer 1.5th part 4
+2024/06/06 16:07:25 beforer 2nd part 4
+2024/06/06 16:07:25 beforer 3rd part 4 input leader commit 1
+2024/06/06 16:07:25 beforer for loop commit part 4
+2024/06/06 16:07:25 in for loop commit part lastappplied for 4 is 1 with commitindex 1
+2024/06/06 16:07:25 returning from append entries 4
+2024/06/06 16:07:25 in appendentries for 1
+2024/06/06 16:07:25 serveer status for 1 false
+2024/06/06 16:07:25 beforer 1st part 1
+2024/06/06 16:07:25 beforer 1.5th part 1
+2024/06/06 16:07:25 beforer 2nd part 1
+2024/06/06 16:07:25 beforer 3rd part 1 input leader commit 1
+2024/06/06 16:07:25 beforer for loop commit part 1
+2024/06/06 16:07:25 in for loop commit part lastappplied for 1 is 1 with commitindex 1
+2024/06/06 16:07:25 returning from append entries 1
+2024/06/06 16:07:25 x is recvd serverId:2 term:2 success:true matchedIndex:1
+2024/06/06 16:07:25 recvd append entry serverId:2 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:25 got output serverId:2 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:25 x is recvd serverId:1 term:2 success:true matchedIndex:1
+2024/06/06 16:07:25 x is recvd serverId:4 term:2 success:true matchedIndex:1
+2024/06/06 16:07:25 recvd append entry serverId:1 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:25 recvd append entry serverId:4 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:25 got output serverId:1 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:25 got output serverId:4 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:25 x is recvd serverId:3 term:2 success:true matchedIndex:1
+2024/06/06 16:07:25 recvd append entry serverId:3 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:25 got output serverId:3 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:25 chceking retrying true true [true true true true true] [true true true true true]
+2024/06/06 16:07:25 After sendhearbead 0 log [term:1 term:2] nexindex: [0 2 2 2 2] matchedindx: [0 1 1 1 1]
+2024/06/06 16:07:25 in for loop commit part lastappplied for 0 is 1 with commitindex 1
+2024/06/06 16:07:26 In update file for 2
+2024/06/06 16:07:26 In update file for 2
+2024/06/06 16:07:26 Added to log for 2 log: [term:1 term:2 term:2 fileMetaData:{filename:"testFile1" version:1}]
+2024/06/06 16:07:26 in sendheartbeat loop 2
+2024/06/06 16:07:26 Added to log for 2 log: [term:1 term:2 term:2 fileMetaData:{filename:"testFile1" version:1} term:2 fileMetaData:{filename:"testFile2" version:1}]
+2024/06/06 16:07:26 in sendheartbeat loop 2
+2024/06/06 16:07:26 in appendentries for 3
+2024/06/06 16:07:26 in appendentries for 4
+2024/06/06 16:07:26 serveer status for 3 false
+2024/06/06 16:07:26 beforer 1st part 3
+2024/06/06 16:07:26 in appendentries for 1
+2024/06/06 16:07:26 beforer 1.5th part 3
+2024/06/06 16:07:26 serveer status for 4 false
+2024/06/06 16:07:26 beforer 2nd part 3
+2024/06/06 16:07:26 serveer status for 1 false
+2024/06/06 16:07:26 beforer 1st part 4
+2024/06/06 16:07:26 beforer 1st part 1
+2024/06/06 16:07:26 beforer 3rd part 3 input leader commit 1
+2024/06/06 16:07:26 beforer 1.5th part 4
+2024/06/06 16:07:26 beforer 1.5th part 1
+2024/06/06 16:07:26 beforer 2nd part 4
+2024/06/06 16:07:26 beforer 2nd part 1
+2024/06/06 16:07:26 beforer for loop commit part 3
+2024/06/06 16:07:26 beforer 3rd part 4 input leader commit 1
+2024/06/06 16:07:26 beforer 3rd part 1 input leader commit 1
+2024/06/06 16:07:26 in for loop commit part lastappplied for 3 is 1 with commitindex 1
+2024/06/06 16:07:26 beforer for loop commit part 4
+2024/06/06 16:07:26 beforer for loop commit part 1
+2024/06/06 16:07:26 returning from append entries 3
+2024/06/06 16:07:26 in for loop commit part lastappplied for 4 is 1 with commitindex 1
+2024/06/06 16:07:26 in for loop commit part lastappplied for 1 is 1 with commitindex 1
+2024/06/06 16:07:26 returning from append entries 4
+2024/06/06 16:07:26 returning from append entries 1
+2024/06/06 16:07:26 in appendentries for 4
+2024/06/06 16:07:26 in appendentries for 3
+2024/06/06 16:07:26 serveer status for 4 false
+2024/06/06 16:07:26 serveer status for 3 false
+2024/06/06 16:07:26 beforer 1st part 4
+2024/06/06 16:07:26 beforer 1st part 3
+2024/06/06 16:07:26 beforer 1.5th part 4
+2024/06/06 16:07:26 beforer 1.5th part 3
+2024/06/06 16:07:26 beforer 2nd part 3
+2024/06/06 16:07:26 beforer 2nd part 4
+2024/06/06 16:07:26 beforer 3rd part 3 input leader commit 1
+2024/06/06 16:07:26 beforer 3rd part 4 input leader commit 1
+2024/06/06 16:07:26 in appendentries for 1
+2024/06/06 16:07:26 in appendentries for 0
+2024/06/06 16:07:26 beforer for loop commit part 3
+2024/06/06 16:07:26 beforer for loop commit part 4
+2024/06/06 16:07:26 serveer status for 1 false
+2024/06/06 16:07:26 in for loop commit part lastappplied for 3 is 1 with commitindex 1
+2024/06/06 16:07:26 in for loop commit part lastappplied for 4 is 1 with commitindex 1
+2024/06/06 16:07:26 beforer 1st part 1
+2024/06/06 16:07:26 returning from append entries 3
+2024/06/06 16:07:26 serveer status for 0 false
+2024/06/06 16:07:26 returning from append entries 4
+2024/06/06 16:07:26 beforer 1.5th part 1
+2024/06/06 16:07:26 beforer 1st part 0
+2024/06/06 16:07:26 beforer 2nd part 1
+2024/06/06 16:07:26 beforer 1.5th part 0
+2024/06/06 16:07:26 beforer 3rd part 1 input leader commit 1
+2024/06/06 16:07:26 beforer 2nd part 0
+2024/06/06 16:07:26 beforer for loop commit part 1
+2024/06/06 16:07:26 beforer 3rd part 0 input leader commit 1
+2024/06/06 16:07:26 in for loop commit part lastappplied for 1 is 1 with commitindex 1
+2024/06/06 16:07:26 beforer for loop commit part 0
+2024/06/06 16:07:26 returning from append entries 1
+2024/06/06 16:07:26 in for loop commit part lastappplied for 0 is 1 with commitindex 1
+2024/06/06 16:07:26 returning from append entries 0
+2024/06/06 16:07:26 in appendentries for 0
+2024/06/06 16:07:26 serveer status for 0 false
+2024/06/06 16:07:26 beforer 1st part 0
+2024/06/06 16:07:26 beforer 1.5th part 0
+2024/06/06 16:07:26 beforer 2nd part 0
+2024/06/06 16:07:26 beforer 3rd part 0 input leader commit 1
+2024/06/06 16:07:26 beforer for loop commit part 0
+2024/06/06 16:07:26 in for loop commit part lastappplied for 0 is 1 with commitindex 1
+2024/06/06 16:07:26 returning from append entries 0
+2024/06/06 16:07:26 x is recvd serverId:4 term:2 success:true matchedIndex:1
+2024/06/06 16:07:26 recvd append entry serverId:4 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:26 got output serverId:4 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:26 x is recvd serverId:3 term:2 success:true matchedIndex:1
+2024/06/06 16:07:26 recvd append entry serverId:3 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:26 got output serverId:3 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:26 x is recvd serverId:3 term:2 success:true matchedIndex:1
+2024/06/06 16:07:26 recvd append entry serverId:3 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:26 got output serverId:3 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:26 x is recvd serverId:1 term:2 success:true matchedIndex:1
+2024/06/06 16:07:26 recvd append entry serverId:1 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:26 got output serverId:1 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:26 x is recvd serverId:1 term:2 success:true matchedIndex:1
+2024/06/06 16:07:26 recvd append entry serverId:1 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:26 got output serverId:1 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:26 x is recvd term:2 success:true matchedIndex:1
+2024/06/06 16:07:26 x is recvd serverId:4 term:2 success:true matchedIndex:1
+2024/06/06 16:07:26 recvd append entry term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:26 x is recvd term:2 success:true matchedIndex:1
+2024/06/06 16:07:26 recvd append entry serverId:4 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:26 got output term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:26 recvd append entry term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:26 got output serverId:4 term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:26 got output term:2 success:true matchedIndex:1 <nil>
+2024/06/06 16:07:26 chceking retrying true true [true true true true true] [true true true true true]
+2024/06/06 16:07:26 chceking retrying true true [true true true true true] [true true true true true]
+2024/06/06 16:07:26 After sendhearbead 2 log [term:1 term:2 term:2 fileMetaData:{filename:"testFile1" version:1} term:2 fileMetaData:{filename:"testFile2" version:1}] nexindex: [4 4 0 4 4] matchedindx: [1 1 0 1 1]
+2024/06/06 16:07:26 in for loop commit part lastappplied for 2 is 1 with commitindex 3
+2024/06/06 16:07:26 lastappplied for 2 is 1 with commitindex 3
+2024/06/06 16:07:26 new file  testFile1 created with version:  1
+2024/06/06 16:07:26 in for loop commit part lastappplied for 2 is 2 with commitindex 3
+2024/06/06 16:07:26 lastappplied for 2 is 2 with commitindex 3
+2024/06/06 16:07:26 new file  testFile2 created with version:  1
+2024/06/06 16:07:26 After sendhearbead 2 log [term:1 term:2 term:2 fileMetaData:{filename:"testFile1" version:1} term:2 fileMetaData:{filename:"testFile2" version:1}] nexindex: [4 4 0 4 4] matchedindx: [1 1 0 1 1]
+2024/06/06 16:07:26 in for loop commit part lastappplied for 2 is 3 with commitindex 3
+2024/06/06 16:07:26 in sendheartbeat loop 2
+2024/06/06 16:07:26 in sendheartbeat loop 2
+2024/06/06 16:07:26 in appendentries for 0
+2024/06/06 16:07:26 in appendentries for 4
+2024/06/06 16:07:26 serveer status for 4 false
+2024/06/06 16:07:26 serveer status for 0 false
+2024/06/06 16:07:26 beforer 1st part 4
+2024/06/06 16:07:26 beforer 1st part 0
+2024/06/06 16:07:26 beforer 1.5th part 4
+2024/06/06 16:07:26 beforer 1.5th part 0
+2024/06/06 16:07:26 beforer 2nd part 0
+2024/06/06 16:07:26 beforer 2nd part 4
+2024/06/06 16:07:26 returning from append entries 4
+2024/06/06 16:07:26 returning from append entries 0
+2024/06/06 16:07:26 in appendentries for 4
+2024/06/06 16:07:26 serveer status for 4 false
+2024/06/06 16:07:26 beforer 1st part 4
+2024/06/06 16:07:26 beforer 1.5th part 4
+2024/06/06 16:07:26 beforer 2nd part 4
+2024/06/06 16:07:26 returning from append entries 4
+2024/06/06 16:07:26 in appendentries for 1
+2024/06/06 16:07:26 in appendentries for 3
+2024/06/06 16:07:26 serveer status for 3 false
+2024/06/06 16:07:26 serveer status for 1 false
+2024/06/06 16:07:26 beforer 1st part 3
+2024/06/06 16:07:26 beforer 1st part 1
+2024/06/06 16:07:26 beforer 1.5th part 3
+2024/06/06 16:07:26 beforer 1.5th part 1
+2024/06/06 16:07:26 beforer 2nd part 3
+2024/06/06 16:07:26 beforer 2nd part 1
+2024/06/06 16:07:26 returning from append entries 3
+2024/06/06 16:07:26 returning from append entries 1
+2024/06/06 16:07:26 in appendentries for 3
+2024/06/06 16:07:26 serveer status for 3 false
+2024/06/06 16:07:26 beforer 1st part 3
+2024/06/06 16:07:26 beforer 1.5th part 3
+2024/06/06 16:07:26 beforer 2nd part 3
+2024/06/06 16:07:26 returning from append entries 3
+2024/06/06 16:07:26 in appendentries for 1
+2024/06/06 16:07:26 serveer status for 1 false
+2024/06/06 16:07:26 in appendentries for 0
+2024/06/06 16:07:26 beforer 1st part 1
+2024/06/06 16:07:26 beforer 1.5th part 1
+2024/06/06 16:07:26 beforer 2nd part 1
+2024/06/06 16:07:26 serveer status for 0 false
+2024/06/06 16:07:26 returning from append entries 1
+2024/06/06 16:07:26 beforer 1st part 0
+2024/06/06 16:07:26 beforer 1.5th part 0
+2024/06/06 16:07:26 beforer 2nd part 0
+2024/06/06 16:07:26 returning from append entries 0
+2024/06/06 16:07:26 x is recvd <nil>
+2024/06/06 16:07:26 x is recvd <nil>
+2024/06/06 16:07:26 output append serverId:3
+2024/06/06 16:07:26 output append serverId:1
+2024/06/06 16:07:26 recvd append entry serverId:3 rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 recvd append entry serverId:1 rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 x is recvd <nil>
+2024/06/06 16:07:26 output append serverId:1
+2024/06/06 16:07:26 recvd append entry serverId:1 rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 got output serverId:3 rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 got err:  rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 ----------------reached asking older log for: 3
+2024/06/06 16:07:26 got output serverId:1 rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 got err:  rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 ----------------reached asking older log for: 1
+2024/06/06 16:07:26 x is recvd <nil>
+2024/06/06 16:07:26 got output serverId:1 rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 output append serverId:3
+2024/06/06 16:07:26 got err:  rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 recvd append entry serverId:3 rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 ----------------reached asking older log for: 1
+2024/06/06 16:07:26 got output serverId:3 rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 got err:  rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 ----------------reached asking older log for: 3
+2024/06/06 16:07:26 x is recvd <nil>
+2024/06/06 16:07:26 x is recvd <nil>
+2024/06/06 16:07:26 output append 
+2024/06/06 16:07:26 output append serverId:4
+2024/06/06 16:07:26 x is recvd <nil>
+2024/06/06 16:07:26 x is recvd <nil>
+2024/06/06 16:07:26 recvd append entry serverId:4 rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 output append serverId:4
+2024/06/06 16:07:26 output append 
+2024/06/06 16:07:26 recvd append entry serverId:4 rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 recvd append entry  rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 recvd append entry  rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 got output serverId:4 rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 got output serverId:4 rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 got err:  rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 got err:  rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 ----------------reached asking older log for: 4
+2024/06/06 16:07:26 ----------------reached asking older log for: 4
+2024/06/06 16:07:26 got output  rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 got err:  rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 got output  rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 got err:  rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:26 ----------------reached asking older log for: 0
+2024/06/06 16:07:26 chceking retrying false false [true true true true true] [false false true false false]
+2024/06/06 16:07:26 ----------------reached asking older log for: 0
+2024/06/06 16:07:26 chceking retrying false false [true true true true true] [false false true false false]
+2024/06/06 16:07:27 in sendheartbeat loop 2
+2024/06/06 16:07:27 in sendheartbeat loop 2
+2024/06/06 16:07:27 in appendentries for 1
+2024/06/06 16:07:27 serveer status for 1 false
+2024/06/06 16:07:27 beforer 1st part 1
+2024/06/06 16:07:27 beforer 1.5th part 1
+2024/06/06 16:07:27 beforer 2nd part 1
+2024/06/06 16:07:27 beforer 3rd part 1 input leader commit 3
+2024/06/06 16:07:27 beforer for loop commit part 1
+2024/06/06 16:07:27 in for loop commit part lastappplied for 1 is 1 with commitindex 3
+2024/06/06 16:07:27 lastappplied for 1 is 1 with commitindex 3
+2024/06/06 16:07:27 new file  testFile1 created with version:  1
+2024/06/06 16:07:27 in for loop commit part lastappplied for 1 is 2 with commitindex 3
+2024/06/06 16:07:27 lastappplied for 1 is 2 with commitindex 3
+2024/06/06 16:07:27 new file  testFile2 created with version:  1
+2024/06/06 16:07:27 returning from append entries 1
+2024/06/06 16:07:27 in appendentries for 0
+2024/06/06 16:07:27 serveer status for 0 false
+2024/06/06 16:07:27 beforer 1st part 0
+2024/06/06 16:07:27 beforer 1.5th part 0
+2024/06/06 16:07:27 beforer 2nd part 0
+2024/06/06 16:07:27 beforer 3rd part 0 input leader commit 3
+2024/06/06 16:07:27 beforer for loop commit part 0
+2024/06/06 16:07:27 in for loop commit part lastappplied for 0 is 1 with commitindex 3
+2024/06/06 16:07:27 lastappplied for 0 is 1 with commitindex 3
+2024/06/06 16:07:27 new file  testFile1 created with version:  1
+2024/06/06 16:07:27 in for loop commit part lastappplied for 0 is 2 with commitindex 3
+2024/06/06 16:07:27 lastappplied for 0 is 2 with commitindex 3
+2024/06/06 16:07:27 new file  testFile2 created with version:  1
+2024/06/06 16:07:27 returning from append entries 0
+2024/06/06 16:07:27 in appendentries for 0
+2024/06/06 16:07:27 in appendentries for 3
+2024/06/06 16:07:27 serveer status for 0 false
+2024/06/06 16:07:27 beforer 1st part 0
+2024/06/06 16:07:27 beforer 1.5th part 0
+2024/06/06 16:07:27 beforer 2nd part 0
+2024/06/06 16:07:27 beforer 3rd part 0 input leader commit 3
+2024/06/06 16:07:27 beforer for loop commit part 0
+2024/06/06 16:07:27 in for loop commit part lastappplied for 0 is 3 with commitindex 3
+2024/06/06 16:07:27 serveer status for 3 false
+2024/06/06 16:07:27 returning from append entries 0
+2024/06/06 16:07:27 beforer 1st part 3
+2024/06/06 16:07:27 beforer 1.5th part 3
+2024/06/06 16:07:27 beforer 2nd part 3
+2024/06/06 16:07:27 beforer 3rd part 3 input leader commit 3
+2024/06/06 16:07:27 beforer for loop commit part 3
+2024/06/06 16:07:27 in for loop commit part lastappplied for 3 is 1 with commitindex 3
+2024/06/06 16:07:27 lastappplied for 3 is 1 with commitindex 3
+2024/06/06 16:07:27 new file  testFile1 created with version:  1
+2024/06/06 16:07:27 in for loop commit part lastappplied for 3 is 2 with commitindex 3
+2024/06/06 16:07:27 lastappplied for 3 is 2 with commitindex 3
+2024/06/06 16:07:27 new file  testFile2 created with version:  1
+2024/06/06 16:07:27 returning from append entries 3
+2024/06/06 16:07:27 in appendentries for 4
+2024/06/06 16:07:27 serveer status for 4 false
+2024/06/06 16:07:27 beforer 1st part 4
+2024/06/06 16:07:27 beforer 1.5th part 4
+2024/06/06 16:07:27 beforer 2nd part 4
+2024/06/06 16:07:27 beforer 3rd part 4 input leader commit 3
+2024/06/06 16:07:27 beforer for loop commit part 4
+2024/06/06 16:07:27 in appendentries for 3
+2024/06/06 16:07:27 in for loop commit part lastappplied for 4 is 1 with commitindex 3
+2024/06/06 16:07:27 lastappplied for 4 is 1 with commitindex 3
+2024/06/06 16:07:27 serveer status for 3 false
+2024/06/06 16:07:27 beforer 1st part 3
+2024/06/06 16:07:27 new file  testFile1 created with version:  1
+2024/06/06 16:07:27 beforer 1.5th part 3
+2024/06/06 16:07:27 in for loop commit part lastappplied for 4 is 2 with commitindex 3
+2024/06/06 16:07:27 beforer 2nd part 3
+2024/06/06 16:07:27 lastappplied for 4 is 2 with commitindex 3
+2024/06/06 16:07:27 new file  testFile2 created with version:  1
+2024/06/06 16:07:27 beforer 3rd part 3 input leader commit 3
+2024/06/06 16:07:27 returning from append entries 4
+2024/06/06 16:07:27 beforer for loop commit part 3
+2024/06/06 16:07:27 in for loop commit part lastappplied for 3 is 3 with commitindex 3
+2024/06/06 16:07:27 in appendentries for 4
+2024/06/06 16:07:27 returning from append entries 3
+2024/06/06 16:07:27 serveer status for 4 false
+2024/06/06 16:07:27 beforer 1st part 4
+2024/06/06 16:07:27 beforer 1.5th part 4
+2024/06/06 16:07:27 beforer 2nd part 4
+2024/06/06 16:07:27 beforer 3rd part 4 input leader commit 3
+2024/06/06 16:07:27 beforer for loop commit part 4
+2024/06/06 16:07:27 in appendentries for 1
+2024/06/06 16:07:27 in for loop commit part lastappplied for 4 is 3 with commitindex 3
+2024/06/06 16:07:27 returning from append entries 4
+2024/06/06 16:07:27 serveer status for 1 false
+2024/06/06 16:07:27 beforer 1st part 1
+2024/06/06 16:07:27 beforer 1.5th part 1
+2024/06/06 16:07:27 beforer 2nd part 1
+2024/06/06 16:07:27 beforer 3rd part 1 input leader commit 3
+2024/06/06 16:07:27 beforer for loop commit part 1
+2024/06/06 16:07:27 in for loop commit part lastappplied for 1 is 3 with commitindex 3
+2024/06/06 16:07:27 returning from append entries 1
+2024/06/06 16:07:27 x is recvd serverId:4 term:2 success:true matchedIndex:3
+2024/06/06 16:07:27 recvd append entry serverId:4 term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:27 got output serverId:4 term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:27 x is recvd serverId:3 term:2 success:true matchedIndex:3
+2024/06/06 16:07:27 recvd append entry serverId:3 term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:27 got output serverId:3 term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:27 x is recvd serverId:4 term:2 success:true matchedIndex:3
+2024/06/06 16:07:27 recvd append entry serverId:4 term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:27 got output serverId:4 term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:27 x is recvd serverId:3 term:2 success:true matchedIndex:3
+2024/06/06 16:07:27 recvd append entry serverId:3 term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:27 got output serverId:3 term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:27 x is recvd serverId:1 term:2 success:true matchedIndex:3
+2024/06/06 16:07:27 x is recvd serverId:1 term:2 success:true matchedIndex:3
+2024/06/06 16:07:27 recvd append entry serverId:1 term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:27 got output serverId:1 term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:27 recvd append entry serverId:1 term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:27 got output serverId:1 term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:27 x is recvd term:2 success:true matchedIndex:3
+2024/06/06 16:07:27 recvd append entry term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:27 got output term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:27 chceking retrying true true [true true true true true] [true true true true true]
+2024/06/06 16:07:27 x is recvd term:2 success:true matchedIndex:3
+2024/06/06 16:07:27 recvd append entry term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:27 got output term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:27 chceking retrying true true [true true true true true] [true true true true true]
+2024/06/06 16:07:28 in sendheartbeat loop 2
+2024/06/06 16:07:28 in appendentries for 4
+2024/06/06 16:07:28 serveer status for 4 false
+2024/06/06 16:07:28 beforer 1st part 4
+2024/06/06 16:07:28 beforer 1.5th part 4
+2024/06/06 16:07:28 beforer 2nd part 4
+2024/06/06 16:07:28 beforer 3rd part 4 input leader commit 3
+2024/06/06 16:07:28 beforer for loop commit part 4
+2024/06/06 16:07:28 in for loop commit part lastappplied for 4 is 3 with commitindex 3
+2024/06/06 16:07:28 returning from append entries 4
+2024/06/06 16:07:28 in appendentries for 0
+2024/06/06 16:07:28 in appendentries for 1
+2024/06/06 16:07:28 serveer status for 0 false
+2024/06/06 16:07:28 beforer 1st part 0
+2024/06/06 16:07:28 serveer status for 1 false
+2024/06/06 16:07:28 beforer 1.5th part 0
+2024/06/06 16:07:28 beforer 1st part 1
+2024/06/06 16:07:28 beforer 2nd part 0
+2024/06/06 16:07:28 beforer 1.5th part 1
+2024/06/06 16:07:28 beforer 3rd part 0 input leader commit 3
+2024/06/06 16:07:28 beforer for loop commit part 0
+2024/06/06 16:07:28 beforer 2nd part 1
+2024/06/06 16:07:28 in for loop commit part lastappplied for 0 is 3 with commitindex 3
+2024/06/06 16:07:28 beforer 3rd part 1 input leader commit 3
+2024/06/06 16:07:28 returning from append entries 0
+2024/06/06 16:07:28 beforer for loop commit part 1
+2024/06/06 16:07:28 in for loop commit part lastappplied for 1 is 3 with commitindex 3
+2024/06/06 16:07:28 returning from append entries 1
+2024/06/06 16:07:28 in appendentries for 3
+2024/06/06 16:07:28 serveer status for 3 false
+2024/06/06 16:07:28 beforer 1st part 3
+2024/06/06 16:07:28 beforer 1.5th part 3
+2024/06/06 16:07:28 beforer 2nd part 3
+2024/06/06 16:07:28 beforer 3rd part 3 input leader commit 3
+2024/06/06 16:07:28 beforer for loop commit part 3
+2024/06/06 16:07:28 in for loop commit part lastappplied for 3 is 3 with commitindex 3
+2024/06/06 16:07:28 returning from append entries 3
+2024/06/06 16:07:28 x is recvd serverId:1 term:2 success:true matchedIndex:3
+2024/06/06 16:07:28 recvd append entry serverId:1 term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:28 got output serverId:1 term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:28 x is recvd term:2 success:true matchedIndex:3
+2024/06/06 16:07:28 recvd append entry term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:28 got output term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:28 x is recvd serverId:4 term:2 success:true matchedIndex:3
+2024/06/06 16:07:28 recvd append entry serverId:4 term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:28 x is recvd serverId:3 term:2 success:true matchedIndex:3
+2024/06/06 16:07:28 got output serverId:4 term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:28 recvd append entry serverId:3 term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:28 got output serverId:3 term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:28 chceking retrying true true [true true true true true] [true true true true true]
+--- PASS: TestRaftNetworkPartitionWithConcurrentRequests (12.94s)
+=== RUN   TestRaftLogsConsistentLeaderCrashesBeforeHeartbeat
+2024/06/06 16:07:29 reached here
+2024/06/06 16:07:29 reached here
+2024/06/06 16:07:29 reached here 2
+2024/06/06 16:07:29 reached here 2
+2024/06/06 16:07:29 reached here 3
+2024/06/06 16:07:29 reached here 3
+2024/06/06 16:07:30 In update file for 0
+2024/06/06 16:07:30 Added to log for 0 log: [term:1]
+2024/06/06 16:07:30 in sendheartbeat loop 0
+2024/06/06 16:07:30 in appendentries for 2
+2024/06/06 16:07:30 serveer status for 2 false
+2024/06/06 16:07:30 beforer 1st part 2
+2024/06/06 16:07:30 beforer 1.5th part 2
+2024/06/06 16:07:30 beforer 2nd part 2
+2024/06/06 16:07:30 beforer 3rd part 2 input leader commit -1
+2024/06/06 16:07:30 beforer for loop commit part 2
+2024/06/06 16:07:30 in for loop commit part lastappplied for 2 is -1 with commitindex -1
+2024/06/06 16:07:30 returning from append entries 2
+2024/06/06 16:07:30 in appendentries for 1
+2024/06/06 16:07:30 serveer status for 1 false
+2024/06/06 16:07:30 beforer 1st part 1
+2024/06/06 16:07:30 beforer 1.5th part 1
+2024/06/06 16:07:30 beforer 2nd part 1
+2024/06/06 16:07:30 beforer 3rd part 1 input leader commit -1
+2024/06/06 16:07:30 beforer for loop commit part 1
+2024/06/06 16:07:30 in for loop commit part lastappplied for 1 is -1 with commitindex -1
+2024/06/06 16:07:30 returning from append entries 1
+2024/06/06 16:07:30 x is recvd serverId:1 term:1 success:true matchedIndex:-1
+2024/06/06 16:07:30 recvd append entry serverId:1 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:07:30 got output serverId:1 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:07:30 x is recvd serverId:2 term:1 success:true matchedIndex:-1
+2024/06/06 16:07:30 recvd append entry serverId:2 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:07:30 got output serverId:2 term:1 success:true matchedIndex:-1 <nil>
+2024/06/06 16:07:30 chceking retrying true true [true true true] [true true true]
+2024/06/06 16:07:31 After sendhearbead 0 log [term:1] nexindex: [0 1 1] matchedindx: [0 -1 -1]
+2024/06/06 16:07:31 in for loop commit part lastappplied for 0 is -1 with commitindex 0
+2024/06/06 16:07:31 lastappplied for 0 is -1 with commitindex 0
+2024/06/06 16:07:31 in sendheartbeat loop 0
+2024/06/06 16:07:31 in appendentries for 2
+2024/06/06 16:07:31 serveer status for 2 false
+2024/06/06 16:07:31 beforer 1st part 2
+2024/06/06 16:07:31 beforer 1.5th part 2
+2024/06/06 16:07:31 beforer 2nd part 2
+2024/06/06 16:07:31 beforer 3rd part 2 input leader commit 0
+2024/06/06 16:07:31 beforer for loop commit part 2
+2024/06/06 16:07:31 in for loop commit part lastappplied for 2 is -1 with commitindex 0
+2024/06/06 16:07:31 lastappplied for 2 is -1 with commitindex 0
+2024/06/06 16:07:31 returning from append entries 2
+2024/06/06 16:07:31 in appendentries for 1
+2024/06/06 16:07:31 x is recvd serverId:2 term:1 success:true
+2024/06/06 16:07:31 recvd append entry serverId:2 term:1 success:true <nil>
+2024/06/06 16:07:31 serveer status for 1 false
+2024/06/06 16:07:31 beforer 1st part 1
+2024/06/06 16:07:31 beforer 1.5th part 1
+2024/06/06 16:07:31 beforer 2nd part 1
+2024/06/06 16:07:31 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:31 beforer for loop commit part 1
+2024/06/06 16:07:31 in for loop commit part lastappplied for 1 is -1 with commitindex 0
+2024/06/06 16:07:31 lastappplied for 1 is -1 with commitindex 0
+2024/06/06 16:07:31 returning from append entries 1
+2024/06/06 16:07:31 got output serverId:2 term:1 success:true <nil>
+2024/06/06 16:07:31 x is recvd serverId:1 term:1 success:true
+2024/06/06 16:07:31 recvd append entry serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:31 got output serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:31 chceking retrying true true [true true true] [true true true]
+2024/06/06 16:07:31 Server 2 is crashed
+2024/06/06 16:07:31 In update file for 0
+2024/06/06 16:07:31 Added to log for 0 log: [term:1 term:1 fileMetaData:{filename:"testFile1" version:1}]
+2024/06/06 16:07:31 in sendheartbeat loop 0
+2024/06/06 16:07:31 in appendentries for 1
+2024/06/06 16:07:31 in appendentries for 2
+2024/06/06 16:07:31 serveer status for 1 false
+2024/06/06 16:07:31 beforer 1st part 1
+2024/06/06 16:07:31 serveer status for 2 true
+2024/06/06 16:07:31 beforer 1.5th part 1
+2024/06/06 16:07:31 beforer 2nd part 1
+2024/06/06 16:07:31 beforer 3rd part 1 input leader commit 0
+2024/06/06 16:07:31 beforer for loop commit part 1
+2024/06/06 16:07:31 in for loop commit part lastappplied for 1 is 0 with commitindex 0
+2024/06/06 16:07:31 returning from append entries 1
+2024/06/06 16:07:31 retruning from crashed 2 2 serverId:2 term:1
+2024/06/06 16:07:31 returning from append entries 2
+2024/06/06 16:07:31 x is recvd <nil>
+2024/06/06 16:07:31 output append serverId:2
+2024/06/06 16:07:31 x is recvd serverId:1 term:1 success:true
+2024/06/06 16:07:31 recvd append entry serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:31 got output serverId:1 term:1 success:true <nil>
+2024/06/06 16:07:31 recvd append entry serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:31 got output serverId:2 rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:31 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:31 is perr online [true true false]
+2024/06/06 16:07:31 chceking retrying true true [true true false] [true true false]
+2024/06/06 16:07:32 After sendhearbead 0 log [term:1 term:1 fileMetaData:{filename:"testFile1" version:1}] nexindex: [0 2 1] matchedindx: [0 0 0]
+2024/06/06 16:07:32 in for loop commit part lastappplied for 0 is 0 with commitindex 1
+2024/06/06 16:07:32 lastappplied for 0 is 0 with commitindex 1
+2024/06/06 16:07:32 new file  testFile1 created with version:  1
+2024/06/06 16:07:32 Server 0 is crashed
+2024/06/06 16:07:32 Server 2 is restored to follower and reachable from all servers
+2024/06/06 16:07:32 In update file for 1
+2024/06/06 16:07:32 Added to log for 1 log: [term:1 term:1 fileMetaData:{filename:"testFile1" version:1} term:2]
+2024/06/06 16:07:32 in sendheartbeat loop 1
+2024/06/06 16:07:32 in appendentries for 0
+2024/06/06 16:07:32 serveer status for 0 true
+2024/06/06 16:07:32 retruning from crashed 0 0 term:1 matchedIndex:1
+2024/06/06 16:07:32 returning from append entries 0
+2024/06/06 16:07:32 x is recvd <nil>
+2024/06/06 16:07:32 output append 
+2024/06/06 16:07:32 recvd append entry  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:32 got output  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:32 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:32 is perr online [false true true]
+2024/06/06 16:07:32 in appendentries for 2
+2024/06/06 16:07:32 serveer status for 2 false
+2024/06/06 16:07:32 beforer 1st part 2
+2024/06/06 16:07:32 beforer 1.5th part 2
+2024/06/06 16:07:32 beforer 2nd part 2
+2024/06/06 16:07:32 returning from append entries 2
+2024/06/06 16:07:32 x is recvd <nil>
+2024/06/06 16:07:32 output append serverId:2
+2024/06/06 16:07:32 recvd append entry serverId:2 rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:32 got output serverId:2 rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:32 got err:  rpc error: code = Unknown desc = plz send older entry
+2024/06/06 16:07:32 ----------------reached asking older log for: 2
+2024/06/06 16:07:32 chceking retrying false false [false true true] [false true false]
+2024/06/06 16:07:32 in sendheartbeat loop 1
+2024/06/06 16:07:32 in appendentries for 0
+2024/06/06 16:07:32 serveer status for 0 true
+2024/06/06 16:07:32 retruning from crashed 0 0 term:1 matchedIndex:1
+2024/06/06 16:07:32 returning from append entries 0
+2024/06/06 16:07:32 in appendentries for 2
+2024/06/06 16:07:32 serveer status for 2 false
+2024/06/06 16:07:32 beforer 1st part 2
+2024/06/06 16:07:32 beforer 1.5th part 2
+2024/06/06 16:07:32 beforer 2nd part 2
+2024/06/06 16:07:32 beforer 3rd part 2 input leader commit 0
+2024/06/06 16:07:32 beforer for loop commit part 2
+2024/06/06 16:07:32 in for loop commit part lastappplied for 2 is 0 with commitindex 0
+2024/06/06 16:07:32 returning from append entries 2
+2024/06/06 16:07:32 x is recvd <nil>
+2024/06/06 16:07:32 output append 
+2024/06/06 16:07:32 recvd append entry  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:32 got output  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:32 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:32 is perr online [false true true]
+2024/06/06 16:07:32 x is recvd serverId:2 term:2 success:true
+2024/06/06 16:07:32 recvd append entry serverId:2 term:2 success:true <nil>
+2024/06/06 16:07:32 got output serverId:2 term:2 success:true <nil>
+2024/06/06 16:07:32 chceking retrying true true [false true true] [false true true]
+2024/06/06 16:07:33 After sendhearbead 1 log [term:1 term:1 fileMetaData:{filename:"testFile1" version:1} term:2] nexindex: [2 0 3] matchedindx: [-1 0 0]
+2024/06/06 16:07:33 in for loop commit part lastappplied for 1 is 0 with commitindex 2
+2024/06/06 16:07:33 lastappplied for 1 is 0 with commitindex 2
+2024/06/06 16:07:33 new file  testFile1 created with version:  1
+2024/06/06 16:07:33 in for loop commit part lastappplied for 1 is 1 with commitindex 2
+2024/06/06 16:07:33 lastappplied for 1 is 1 with commitindex 2
+2024/06/06 16:07:33 in sendheartbeat loop 1
+2024/06/06 16:07:33 in appendentries for 0
+2024/06/06 16:07:33 in appendentries for 2
+2024/06/06 16:07:33 serveer status for 2 false
+2024/06/06 16:07:33 serveer status for 0 true
+2024/06/06 16:07:33 beforer 1st part 2
+2024/06/06 16:07:33 beforer 1.5th part 2
+2024/06/06 16:07:33 beforer 2nd part 2
+2024/06/06 16:07:33 beforer 3rd part 2 input leader commit 2
+2024/06/06 16:07:33 beforer for loop commit part 2
+2024/06/06 16:07:33 in for loop commit part lastappplied for 2 is 0 with commitindex 2
+2024/06/06 16:07:33 lastappplied for 2 is 0 with commitindex 2
+2024/06/06 16:07:33 retruning from crashed 0 0 term:1 matchedIndex:1
+2024/06/06 16:07:33 returning from append entries 0
+2024/06/06 16:07:33 new file  testFile1 created with version:  1
+2024/06/06 16:07:33 in for loop commit part lastappplied for 2 is 1 with commitindex 2
+2024/06/06 16:07:33 lastappplied for 2 is 1 with commitindex 2
+2024/06/06 16:07:33 returning from append entries 2
+2024/06/06 16:07:33 x is recvd <nil>
+2024/06/06 16:07:33 output append 
+2024/06/06 16:07:33 recvd append entry  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:33 x is recvd serverId:2 term:2 success:true matchedIndex:2
+2024/06/06 16:07:33 recvd append entry serverId:2 term:2 success:true matchedIndex:2 <nil>
+2024/06/06 16:07:33 got output  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:33 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:33 is perr online [false true true]
+2024/06/06 16:07:33 got output serverId:2 term:2 success:true matchedIndex:2 <nil>
+2024/06/06 16:07:33 chceking retrying true true [false true true] [false true true]
+2024/06/06 16:07:33 In update file for 1
+2024/06/06 16:07:33 Added to log for 1 log: [term:1 term:1 fileMetaData:{filename:"testFile1" version:1} term:2 term:2 fileMetaData:{filename:"testFile2" version:1}]
+2024/06/06 16:07:33 in sendheartbeat loop 1
+2024/06/06 16:07:33 in appendentries for 2
+2024/06/06 16:07:33 serveer status for 2 false
+2024/06/06 16:07:33 beforer 1st part 2
+2024/06/06 16:07:33 beforer 1.5th part 2
+2024/06/06 16:07:33 beforer 2nd part 2
+2024/06/06 16:07:33 beforer 3rd part 2 input leader commit 2
+2024/06/06 16:07:33 beforer for loop commit part 2
+2024/06/06 16:07:33 in for loop commit part lastappplied for 2 is 2 with commitindex 2
+2024/06/06 16:07:33 returning from append entries 2
+2024/06/06 16:07:33 in appendentries for 0
+2024/06/06 16:07:33 serveer status for 0 true
+2024/06/06 16:07:33 retruning from crashed 0 0 term:1 matchedIndex:1
+2024/06/06 16:07:33 returning from append entries 0
+2024/06/06 16:07:33 x is recvd serverId:2 term:2 success:true matchedIndex:2
+2024/06/06 16:07:33 recvd append entry serverId:2 term:2 success:true matchedIndex:2 <nil>
+2024/06/06 16:07:33 got output serverId:2 term:2 success:true matchedIndex:2 <nil>
+2024/06/06 16:07:33 x is recvd <nil>
+2024/06/06 16:07:33 output append 
+2024/06/06 16:07:33 recvd append entry  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:33 got output  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:33 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:33 is perr online [false true true]
+2024/06/06 16:07:33 chceking retrying true true [false true true] [false true true]
+2024/06/06 16:07:33 After sendhearbead 1 log [term:1 term:1 fileMetaData:{filename:"testFile1" version:1} term:2 term:2 fileMetaData:{filename:"testFile2" version:1}] nexindex: [2 0 4] matchedindx: [-1 0 2]
+2024/06/06 16:07:33 in for loop commit part lastappplied for 1 is 2 with commitindex 3
+2024/06/06 16:07:33 lastappplied for 1 is 2 with commitindex 3
+2024/06/06 16:07:33 new file  testFile2 created with version:  1
+2024/06/06 16:07:33 in sendheartbeat loop 1
+2024/06/06 16:07:33 in appendentries for 2
+2024/06/06 16:07:33 serveer status for 2 false
+2024/06/06 16:07:33 beforer 1st part 2
+2024/06/06 16:07:33 beforer 1.5th part 2
+2024/06/06 16:07:33 beforer 2nd part 2
+2024/06/06 16:07:33 beforer 3rd part 2 input leader commit 3
+2024/06/06 16:07:33 beforer for loop commit part 2
+2024/06/06 16:07:33 in for loop commit part lastappplied for 2 is 2 with commitindex 3
+2024/06/06 16:07:33 lastappplied for 2 is 2 with commitindex 3
+2024/06/06 16:07:33 new file  testFile2 created with version:  1
+2024/06/06 16:07:33 returning from append entries 2
+2024/06/06 16:07:33 in appendentries for 0
+2024/06/06 16:07:33 serveer status for 0 true
+2024/06/06 16:07:33 retruning from crashed 0 0 term:1 matchedIndex:1
+2024/06/06 16:07:33 returning from append entries 0
+2024/06/06 16:07:33 x is recvd serverId:2 term:2 success:true matchedIndex:3
+2024/06/06 16:07:33 recvd append entry serverId:2 term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:33 got output serverId:2 term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:33 x is recvd <nil>
+2024/06/06 16:07:33 output append 
+2024/06/06 16:07:33 recvd append entry  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:33 got output  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:33 got err:  rpc error: code = Unknown desc = server is crashed or unreachable
+2024/06/06 16:07:33 is perr online [false true true]
+2024/06/06 16:07:33 chceking retrying true true [false true true] [false true true]
+2024/06/06 16:07:34 Server 0 is restored to follower and reachable from all servers
+2024/06/06 16:07:34 in sendheartbeat loop 1
+2024/06/06 16:07:34 in appendentries for 2
+2024/06/06 16:07:34 serveer status for 2 false
+2024/06/06 16:07:34 beforer 1st part 2
+2024/06/06 16:07:34 beforer 1.5th part 2
+2024/06/06 16:07:34 beforer 2nd part 2
+2024/06/06 16:07:34 beforer 3rd part 2 input leader commit 3
+2024/06/06 16:07:34 beforer for loop commit part 2
+2024/06/06 16:07:34 in for loop commit part lastappplied for 2 is 3 with commitindex 3
+2024/06/06 16:07:34 returning from append entries 2
+2024/06/06 16:07:34 in appendentries for 0
+2024/06/06 16:07:34 serveer status for 0 false
+2024/06/06 16:07:34 beforer 1st part 0
+2024/06/06 16:07:34 beforer 1.5th part 0
+2024/06/06 16:07:34 beforer 2nd part 0
+2024/06/06 16:07:34 beforer 3rd part 0 input leader commit 3
+2024/06/06 16:07:34 beforer for loop commit part 0
+2024/06/06 16:07:34 in for loop commit part lastappplied for 0 is 1 with commitindex 3
+2024/06/06 16:07:34 lastappplied for 0 is 1 with commitindex 3
+2024/06/06 16:07:34 in for loop commit part lastappplied for 0 is 2 with commitindex 3
+2024/06/06 16:07:34 lastappplied for 0 is 2 with commitindex 3
+2024/06/06 16:07:34 new file  testFile2 created with version:  1
+2024/06/06 16:07:34 returning from append entries 0
+2024/06/06 16:07:34 x is recvd term:2 success:true matchedIndex:3
+2024/06/06 16:07:34 recvd append entry term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:34 x is recvd serverId:2 term:2 success:true matchedIndex:3
+2024/06/06 16:07:34 recvd append entry serverId:2 term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:34 got output term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:34 got output serverId:2 term:2 success:true matchedIndex:3 <nil>
+2024/06/06 16:07:34 chceking retrying true true [true true true] [true true true]
+--- PASS: TestRaftLogsConsistentLeaderCrashesBeforeHeartbeat (7.26s)
+PASS
+ok  	cse224/proj5/test	38.159s
